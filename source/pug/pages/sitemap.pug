@@ -1,0 +1,41 @@
+extends ../components/base/layout
+
+block variables
+  - const title = "Pages list"
+
+block main
+  style
+    include ../../sass/inline/sitemap.css
+
+  -
+    const pages = [
+      {
+        name: "UI-kit — ui-kit.html",
+        src: "ui-kit.html"
+      },
+      {
+        name: "Homepage — index.html",
+        src: "index.html"
+      },
+    ]
+
+  main
+    .sitemap
+      .container
+        .sitemap__icon
+          +img("content", "logo", "png", "202", "60", "Logo")
+        h1 Pages list
+        ol
+          each page in pages
+            li
+              if page.id
+                label(for=page.id)
+                  span!= page.name
+                input.visually-hidden(type="checkbox", checked=true, id=page.id)
+                div
+                  ul
+                    each item in page.innerList
+                      li
+                        a(href= item.src)= item.name
+              else
+                a(href= page.src)= page.name
