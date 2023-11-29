@@ -1,17 +1,72 @@
 .btn {
   display: inline-flex;
-  padding: 10px 20px;
-
-  color: $color-default-white;
-
+  padding: 18px 38px;
   background-color: $color-neon-blue;
   border: none;
+  color: $color-default-white;
   cursor: pointer;
-
   transition: opacity $trans-default;
 
-  &--red {
-    background-color: $color-torch-red;
+  &--transparent {
+    padding: 17px 37px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-image: $purple-to-blue;
+    border-image-slice: 1;
+  }
+
+  &--small {
+    padding: 11px 23px;
+  }
+
+  &--burger {
+    position: relative;
+    display: flex;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 11px 10px;
+    transition: border-image $trans-default, border-image-slice $trans-default;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      left: -2px;
+      display: block;
+      width: 35px;
+      height: 1px;
+      background: $purple-to-blue;
+      transition: opacity $trans-default;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    svg {
+      transition: opacity $trans-default;
+    }
+
+    &[aria-pressed="true"] {
+      border-image: unset;
+      border-image-slice: unset;
+
+      svg {
+        opacity: 0;
+      }
+    }
+
+    &[aria-pressed="false"] {
+      &::before,
+      &::after {
+        opacity: 0;
+      }
+    }
   }
 
   &:disabled {

@@ -3,34 +3,47 @@ mixin header(headerMods, currentUrl)
     const headerLinks = [
       {
         href: "index.html",
-        text: "Главная"
+        text: "Home"
       },
       {
         href: "#",
-        text: "Страница 2"
+        text: "About Us"
       },
       {
         href: "#",
-        text: "Страница 3"
+        text: "Service"
       },
+      {
+        href: "#",
+        text: "Pricing Plan"
+      },
+      {
+        href: "#",
+        text: "Blog"
+      },
+      {
+        href: "#",
+        text: "Service"
+      },
+
     ]
 
-  header.header(class=headerMods)
-    .container
-      if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
-      else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
-      nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
-        .main-nav__wrapper
+  header.header(class=headerMods, data-header)
+    .container.header__inner
+      .header__logo-box
+        +logo()
+      .header__nav
+        nav.main-nav
           ul.main-nav__list
             each link in headerLinks
               - const activeState = currentUrl === link.href
-              li.main-nav__item
+              li.main-nav__item(data-nav-item)
                 if(activeState)
                   span.main-nav__link.is-active= link.text
                 else
                   a.main-nav__link(href=link.href)= link.text
+      .header__toggle-box
+        button.btn.btn--transparent.btn--burger(type="button", aria-label="Navigation toggle button", aria-pressed="false", data-burger)
+          +icon("icon-burger", 11, 8)
+      .header__contact-btn-box
+        +btn({href: "#", text: "Contact&nbsp;us", mods: ["transparent", "small"]})

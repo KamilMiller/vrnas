@@ -1,0 +1,10 @@
+mixin title(options = {})
+  -
+    const tag = options.tag ? options.tag : "p";
+    const text = options.text || false
+    const isHidden = options.isHidden ? "visually-hidden" : "";
+    const mods = options.mods || [];
+    const classMods = mods.map((mod) => `title--${mod}`).join(" ");
+
+  #{tag}.title(class=[classMods, isHidden])&attributes(attributes)!= text
+    block

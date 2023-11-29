@@ -127,3 +127,11 @@ button,
 [type="submit"] {
   appearance: none;
 }
+
+:root {
+  --header-height: 114px;
+
+  @include vp-767 {
+    --header-height: 116px;
+  }
+}

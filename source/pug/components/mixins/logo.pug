@@ -1,0 +1,7 @@
+mixin logo()
+  if(currentUrl === "index.html")
+    span.logo&attributes(attributes)
+      img(src="img/content/logo.png", width="101", height="30", alt="Logo VRNas")
+  else
+    a.logo(href="index.html", aria-label="To Homepage")&attributes(attributes)
+      img(src="img/content/logo.png", width="101", height="30", alt="Logo VRNas")

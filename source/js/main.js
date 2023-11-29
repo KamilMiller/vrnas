@@ -3,6 +3,9 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {initHeaderFix} from './modules/header/init-header-fix';
+import {getHeaderHeight} from './modules/header/get-header-height';
+import {Burger} from './modules/header/burger';
 
 // ---------------------------------
 
@@ -12,6 +15,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   mobileVhFix();
+  initHeaderFix();
+  getHeaderHeight();
 
   // Modules
   // ---------------------------------
@@ -27,6 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
+    const burger = new Burger();
+    burger.init();
   });
 });
 
