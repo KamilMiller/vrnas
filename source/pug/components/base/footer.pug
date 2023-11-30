@@ -1,3 +1,108 @@
 mixin footer(footerMods)
+  -
+    const navQuickLinks = [
+      {
+        href: "index.html",
+        text: "Home"
+      },
+      {
+        href: "#",
+        text: "Pricing Plan"
+      },
+      {
+        href: "#",
+        text: "Service"
+      },
+      {
+        href: "#",
+        text: "Blog"
+      },
+      {
+        href: "#",
+        text: "Our Team"
+      },
+    ];
+
+    const navSupportLinks = [
+      {
+        href: "#",
+        text: "About Us"
+      },
+      {
+        href: "#",
+        text: "Contact us"
+      },
+      {
+        href: "#",
+        text: "FAQ"
+      },
+      {
+        href: "#",
+        text: "Tems & Conditions"
+      },
+      {
+        href: "#",
+        text: "Privacy Policy"
+      },
+    ];
+
+    const contactInfo = [
+      {
+        icon: "icon-pin",
+        text: "Tanjung Sari Street no.48, Pontianak City",
+        tag: "address",
+        href: false,
+      },
+      {
+        icon: "icon-email",
+        text: "Support@VRNas.com",
+        tag: "a",
+        href: "mailto:Support@VRNas.com",
+      },
+      {
+        icon: "icon-phone",
+        text: "+123 456 7890",
+        tag: "a",
+        href: "tel:+1234567890",
+      },
+    ];
+
   footer.footer(class=footerMods)
     .container
+      .footer__inner
+        h2.visually-hidden Site navigation and contact info
+        .footer__logo-box
+          +logo()
+        .footer__socials-box
+          +socials([
+            {iconName: "icon-tw", href: "#/", label: "Twitter"},
+            {iconName: "icon-fb",href: "#/", label: "Facebook"},
+            {iconName: "icon-ig", href: "#/", label: "Instagram"},
+            {iconName: "icon-gh", href: "#/", label: "GitHub"},
+          ])
+        .footer__nav-wrapper
+          .footer__nav-list-box
+            +title({tag: "h3", text: "Quicklinks", mods: ["h10"]}).footer__list-title
+            ul.footer__list
+              each link in navQuickLinks
+                li.footer__item
+                  a.footer__link(href=link.href)= link.text
+          .footer__nav-list-box
+            +title({tag: "h3", text: "Support", mods: ["h10"]}).footer__list-title
+            ul.footer__list
+              each link in navSupportLinks
+                li.footer__item
+                  a.footer__link(href=link.href)= link.text
+        .footer__contact-info-box
+          +title({tag: "h3", text: "Need Help?", mods: ["h10"]}).footer__list-title
+          ul.footer__list
+            each item in contactInfo
+              li.footer__item
+                #{item.tag}.footer__link(href=item.href ? item.href : null)
+                  .footer__link-inner
+                    .footer__link-icon-box
+                      +icon(item.icon, 17, 17)
+                    .footer__link-text-box
+                      p!= item.text
+      .footer__legal-info
+        p!= "© Copyright 2023, All Rights Reserved"

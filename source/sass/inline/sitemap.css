@@ -3,6 +3,12 @@
   padding-bottom: 50px;
   padding-top: 50px;
 }
+.sitemap__icon {
+  width: 300px;
+  height: 100px;
+  padding: 20px;
+  background-color: #444444;
+}
 .sitemap h1 {
   color: #2c39f2;
   font-size: 22px;

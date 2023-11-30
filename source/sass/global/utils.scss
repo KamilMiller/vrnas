@@ -18,6 +18,22 @@
     }
   }
 
+  &__bg-wave {
+    position: absolute;
+    // z-index: 3;
+
+    &--upper {
+      top: 0;
+      right: 0;
+    }
+
+    &--lower {
+      bottom: 0;
+      left: 0;
+      transform: rotate(180deg);
+    }
+  }
+
   .header,
   .footer {
     flex-shrink: 0;

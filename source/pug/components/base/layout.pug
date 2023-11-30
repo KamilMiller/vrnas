@@ -44,6 +44,10 @@ html(lang="ru")
 
   body
     .wrapper(class=wrapperMods)
+      if (wrapperMods === "wrapper--common")
+        +img("content", "wave-top", "png",  736, 353).wrapper__bg-wave.wrapper__bg-wave--upper
+        +img("content", "wave-top", "png",  736, 353).wrapper__bg-wave.wrapper__bg-wave--lower
+
       if (hasHeader)
         +header(headerMods, currentUrl)
 

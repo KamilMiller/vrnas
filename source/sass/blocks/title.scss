@@ -1,0 +1,67 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $ff-chakra;
+  font-style: normal;
+  color: inherit;
+
+  &--h1 {
+    font-size: 64px;
+    font-weight: 600;
+    line-height: auto;
+  }
+
+  &--h2 {
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 58px;
+  }
+
+  &--h3 {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 58px;
+  }
+
+  &--h4 {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 44px;
+  }
+
+  &--h5 {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: auto;
+  }
+
+  &--h6 {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: auto;
+  }
+
+  &--h7 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: auto;
+  }
+
+  &--h8 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: auto;
+  }
+
+  &--h9 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: auto;
+  }
+
+  &--h10 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+}

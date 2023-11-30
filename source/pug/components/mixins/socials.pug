@@ -1,0 +1,7 @@
+mixin socials(data)
+  .socials&attributes(attributes)
+    ul.socials__list
+      each item in data
+        li.socials__item
+          a.socials__link(href=item.href, aria-label=item.label, target="_blank", rel="nofollow noopener noreferrer", class=item.mod)
+            +icon(item.iconName, 22, 22)
