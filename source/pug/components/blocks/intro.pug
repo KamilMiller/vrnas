@@ -1,11 +1,32 @@
 mixin intro()
-  .intro
-    //- вставлять блоки во внешний контейнер неверно
-    //- все блоки содержат в себе container без доп класса tutorial__wrapper
-    .container
-      p(style="margin-top: 40px;color: green;") Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam?
-      p(style="margin-top: 40px;color: orange;") Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptate similique laudantium officia iure, commodi vero hic. Laboriosam repudiandae ullam cupiditate hic veritatis non? Similique qui odit at totam quisquam?
+  -
+    const clientList = ["portrait-1", "portrait-2", "portrait-3"]
 
-      p(style="margin-top: 40px;color: white;") Пример использования +img()
-      p(style="margin-bottom: 40px;color: white;")
-        +img("content", "placeholder", "png", 120, 120, "Пример")
+  section.intro
+    .intro__bg-element.intro__bg-element--grid
+      +icon("decorative-grid", 1097, 721)
+    .intro__bg-element.intro__bg-element--light
+      +picture("content", "light-1", "png", 987, 760)
+    .container
+      h1.visually-hidden VRNas - provider of virtual reality services
+      .intro__inner
+        .intro__content-box
+          +title({tag: "h2", text: "Immerse Yourse lf in Virtual Reality", mods: ["h1"]}).intro__title
+          .intro__subtitle-box
+            p Experience Unforgettable Events in VR. Bring your events to life like never before with our VR services
+          +btn({href: "#", text: "Discover more"}).intro__more-btn
+          .intro__wrapper
+            .intro__client-info-box
+              .intro__client-list-box
+                ul.intro__client-list
+                  each item in clientList
+                    li.intro__client-item
+                      +picture("content", item, "jpg", 50, 50, "Happy Client")
+              .intro__client-statistic-box
+                p!= "<b>32k+</b> Happy Client"
+            .intro__extra-pic
+              +picture("content", "head-mounted-display-1", "jpg", 196, 128, "")
+        .intro__illustration-box
+          .intro__illustration-wrapper
+            +picture("content", "user", "png", 526, 626, "User of Head Mounted Display")
+      +services()

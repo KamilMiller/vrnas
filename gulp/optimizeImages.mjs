@@ -67,4 +67,11 @@ const createAvif = () => {
       .pipe(gulp.dest(`source/img/${root}`));
 };
 
-export {sprite, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg};
+const spriteGradient = () =>
+  gulp
+      .src('source/img/sprite/gradient/*.svg')
+      .pipe(svgstore({inlineSvg: true}))
+      .pipe(rename('sprite-gradient.svg'))
+      .pipe(gulp.dest('build/img'));
+
+export {sprite, createWebp, createAvif, optimizeSvg, optimizePng, optimizeJpg, spriteGradient};

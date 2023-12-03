@@ -1,0 +1,273 @@
+.intro {
+  position: relative;
+  overflow: hidden;
+  // outline: 2px dashed red;
+
+  &__bg-element {
+    position: absolute;
+    z-index: 1;
+
+    &--grid {
+      top: 17%;
+      left: 0;
+
+      @include vp-767 {
+        top: 9.5%;
+      }
+    }
+
+    &--light {
+      left: 42%;
+      top: var(--intro-light-top);
+
+      @include vp-767 {
+        // top: 186px; // To JS calc
+        left: 17%;
+        width: 978px;
+        height: 760px;
+      }
+
+      @include vp-599 {
+        left: 0;
+      }
+
+      @include vp-429 {
+        left: -15%;
+      }
+    }
+  }
+
+  & > .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+
+    @include vp-1279 {
+      gap: 50px;
+    }
+
+    @include vp-1023 {
+      grid-template-columns: 4fr 3fr;
+    }
+
+    @include vp-767 {
+      display: flex;
+      flex-direction: column;
+      gap: unset;
+    }
+
+    // outline: 2px dashed white;
+  }
+
+  &__content-box {
+    display: flex;
+    flex-direction: column;
+    padding-top: 87px;
+
+    @include vp-1279 {
+      padding-top: 30px;
+      margin-bottom: 20px;
+    }
+
+    @include vp-767 {
+      position: relative;
+      padding-top: 38px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    letter-spacing: -0.32px;
+  }
+
+  &__subtitle-box {
+    max-width: 450px;
+    margin-bottom: 32px;
+    color: $color-gray-2;
+  }
+
+  &__subtitle-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  &__more-btn {
+    align-self: flex-start;
+    margin-bottom: 42px;
+
+    @include vp-767 {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 60px;
+
+    @include vp-1279 {
+      display: flex;
+      gap: unset;
+      max-width: 300px;
+    }
+
+    @include vp-767 {
+      position: static;
+      max-width: unset;
+    }
+  }
+
+  &__client-info-box {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__client-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__client-item {
+    border-radius: 50%;
+    border: 1px solid $color-default-black;
+    overflow: hidden;
+
+    &:nth-child(2) {
+      transform: translateX(-12px);
+
+      @include vp-767 {
+        transform: translateX(-14px);
+      }
+    }
+
+    &:last-child {
+      transform: translateX(-24px);
+
+      @include vp-767 {
+        transform: translateX(-28px);
+      }
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+
+  &__client-statistic-box {
+    margin-left: -6px;
+    color: $color-gray-2;
+
+    @include vp-767 {
+      margin-left: -11px;
+    }
+  }
+
+  &__client-statistic-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  &__client-statistic-box b {
+    font-weight: 600;
+    color: $color-default-white;
+  }
+
+  &__extra-pic {
+    display: flex;
+    justify-content: flex-end;
+
+
+    @include vp-1279 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      transform: translateX(100%);
+    }
+
+    @include vp-767 {
+      transform: none;
+      bottom: -271px;
+      left: 30px;
+      right: unset;
+      transform: none;
+    }
+
+    @include vp-599 {
+      left: 0;
+    }
+
+    @include vp-429 {
+      bottom: -400px;
+    }
+  }
+
+  &__extra-pic img {
+    width: 196px;
+    height: 128px;
+    object-fit: cover;
+  }
+
+  &__illustration-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-top: 13px;
+
+    @include vp-767 {
+      margin-top: -23px;
+      padding-top: 0;
+    }
+  }
+
+  &__illustration-wrapper {
+    position: relative;
+    max-width: 526px;
+    width: 100%;
+    padding-top: 114%;
+    overflow: hidden;
+
+    @include vp-1279 {
+      padding-top: 109%;
+    }
+
+    @include vp-1023 {
+      padding-top: 119%;
+    }
+
+    @include vp-767 {
+      width: 355px;
+      min-width: 355px;
+      padding-top: 418px;
+    }
+
+    @include vp-599 {
+      transform: translateX(37%);
+    }
+  }
+
+  &__illustration-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 526px;
+    max-height: 626px;
+    width: 100%;
+    object-fit: cover;
+  }
+}

@@ -130,8 +130,11 @@ button,
 
 :root {
   --header-height: 114px;
+  --intro-light-top: 0;
 
   @include vp-767 {
     --header-height: 116px;
+    --intro-light-top: 186px;
   }
+
 }

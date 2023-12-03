@@ -11,6 +11,7 @@
   &--common {
     padding-top: var(--header-height);
     background-color: $color-grayscale-black-100;
+    overflow: hidden;
 
     // Temp:
     main {
@@ -20,7 +21,13 @@
 
   &__bg-wave {
     position: absolute;
-    // z-index: 3;
+    width: 736px;
+    height: 353px;
+
+    @include vp-767 {
+      width: 433px;
+      height: 208px;
+    }
 
     &--upper {
       top: 0;

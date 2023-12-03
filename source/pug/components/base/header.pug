@@ -6,39 +6,40 @@ mixin header(headerMods, currentUrl)
         text: "Home"
       },
       {
-        href: "#",
-        text: "About Us"
+        href: "about-us.html",
+        text: "About us"
       },
       {
-        href: "#",
+        href: "service.html",
         text: "Service"
       },
       {
-        href: "#",
+        href: "prices.html",
         text: "Pricing Plan"
       },
       {
-        href: "#",
+        href: "blog.html",
         text: "Blog"
       },
     ]
 
   header.header(class=headerMods, data-header)
-    .container.header__inner
-      .header__logo-box
-        +logo()
-      .header__nav
-        nav.main-nav
-          ul.main-nav__list
-            each link in headerLinks
-              - const activeState = currentUrl === link.href
-              li.main-nav__item(data-nav-item)
-                if(activeState)
-                  span.main-nav__link.is-active= link.text
-                else
-                  a.main-nav__link(href=link.href)= link.text
-      .header__toggle-box
-        button.btn.btn--transparent.btn--burger(type="button", aria-label="Navigation toggle button", aria-pressed="false", data-burger)
-          +icon("icon-burger", 11, 8)
-      .header__contact-btn-box
-        +btn({href: "#", text: "Contact&nbsp;us", mods: ["transparent", "small"]})
+    .container
+      .header__inner
+        .header__logo-box
+          +logo()
+        .header__nav
+          nav.main-nav
+            ul.main-nav__list
+              each link in headerLinks
+                - const activeState = currentUrl === link.href
+                li.main-nav__item(data-nav-item)
+                  if (activeState)
+                    span.main-nav__link.is-active= link.text
+                  else
+                    a.main-nav__link(href=link.href)= link.text
+        .header__toggle-box
+          button.btn.btn--transparent.btn--burger(type="button", aria-label="Navigation toggle button", aria-pressed="false", data-burger)
+            +icon("icon-burger", 11, 8)
+        .header__contact-btn-box
+          +btn({href: "#", text: "Contact&nbsp;us", mods: ["transparent", "small"]})

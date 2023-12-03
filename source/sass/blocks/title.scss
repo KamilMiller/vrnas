@@ -8,7 +8,12 @@
   &--h1 {
     font-size: 64px;
     font-weight: 600;
-    line-height: auto;
+    line-height: normal;
+
+    @include vp-1023 {
+      font-size: 48px;
+      line-height: 58px;
+    }
   }
 
   &--h2 {
@@ -32,31 +37,31 @@
   &--h5 {
     font-size: 32px;
     font-weight: 600;
-    line-height: auto;
+    line-height: normal;
   }
 
   &--h6 {
     font-size: 28px;
     font-weight: 600;
-    line-height: auto;
+    line-height: normal;
   }
 
   &--h7 {
     font-size: 20px;
     font-weight: 400;
-    line-height: auto;
+    line-height: normal;
   }
 
   &--h8 {
     font-size: 20px;
     font-weight: 500;
-    line-height: auto;
+    line-height: normal;
   }
 
   &--h9 {
     font-size: 18px;
     font-weight: 400;
-    line-height: auto;
+    line-height: normal;
   }
 
   &--h10 {

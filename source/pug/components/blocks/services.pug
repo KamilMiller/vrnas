@@ -1,0 +1,34 @@
+mixin services()
+  -
+    const serviceList = [
+      {
+        icon: "expertise-icon",
+        title: "Expertise",
+        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+      },
+      {
+        icon: "customisation-icon",
+        title: "Customization",
+        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+      },
+      {
+        icon: "service-icon",
+        title: "Service",
+        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+      },
+    ]
+
+  .services
+    h2.visually-hidden Services
+    ul.services__list
+      each item in serviceList
+        li.services__item
+          .services__icon-box
+            +icon(item.icon, 70, 70, true)
+          .services__content-wrapper
+            +title({tag: "h3", text: item.title, mods: ["h7"]}).services__title
+            .services__content-text
+              p!= item.text
+
+
+
