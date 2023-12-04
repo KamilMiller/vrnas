@@ -22,6 +22,8 @@ block main
             li
               a(href="#buttons") Buttons
             li
+              a(href="#titles") Buttons
+            li
               a(href="#forms") Form elements
 
       //----------------------------------------------
@@ -57,25 +59,92 @@ block main
           h2.uikit__h2 Buttons
           .uikit__component
             p.uikit__text.uikit__text--class .btn \ default \ button
-            +btn({text: "Кнопка"})
+            +btn({text: "Button"})
             pre
               |
               code(class="language-pug").
-                +btn({text: "Текст", href: "#"})
+                +btn({text: "Текст"})
           .uikit__component
-            p.uikit__text.uikit__text--class .btn \ .btn--red \ link
-            +btn({text: "Текст", href: "#", isExternal: true}).btn--red(aria-label="Просто ссылка")
+            p.uikit__text.uikit__text--class .btn \ link \ button
+            +btn({text: "Text", href: "#", isExternal: true})(aria-label="Link")
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст", href: "#", isExternal: true})(aria-label="Просто ссылка").btn--red
           .uikit__component
+            p.uikit__text.uikit__text--class .btn \ link \ button \ small
+            +btn({text: "Text", mods: ["small"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Text", mods: ["small"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ link \ button \ transparent
+            +btn({text: "Text", mods: ["transparent"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Text", mods: ["transparent"]})
+          .uikit__component
+            p.uikit__text.uikit__text--class .btn \ link \ button \ small \ transparent
+            +btn({text: "Text", mods: ["small", "transparent"]})
+            pre
+              |
+              code(class="language-pug").
+                +btn({text: "Text", mods: ["small", "transparent"]})
+          .uikit__component
             p.uikit__text.uikit__text--class .btn \ disabled \ button
-            +btn({text: "Текст"})(disabled)
+            +btn({text: "Text"})(disabled)
             pre
               |
               code(class="language-pug").
                 +btn({text: "Текст"})(disabled)
+
+        //- Buttons
+        section.uikit__section(id="titles")
+          h2.uikit__h2 Titles
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h1
+            +title({tag: "h1", mods: ["h1"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h1", mods: ["h1"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h2
+            +title({tag: "h2", mods: ["h2"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h2", mods: ["h2"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h3
+            +title({tag: "h3", mods: ["h3"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h3", mods: ["h3"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h4
+            +title({tag: "h4", mods: ["h4"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h4", mods: ["h4"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h5
+            +title({tag: "h5", mods: ["h5"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h5", mods: ["h5"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h6
+            +title({tag: "h6", mods: ["h6"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h6", mods: ["h6"], text: "Title"})
 
         //- Элементы форм
         section.uikit__section(id="forms")

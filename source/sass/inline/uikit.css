@@ -1,6 +1,7 @@
 .uikit {
   padding: 50px 0;
   scroll-behavior: smooth;
+  background-color: #444444;
 }
 @media (max-width: 1023px) {
   .uikit {
