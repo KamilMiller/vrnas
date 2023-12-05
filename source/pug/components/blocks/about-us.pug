@@ -1,0 +1,30 @@
+mixin about-us()
+  -
+    const technologyList = [
+      "Cutting-Edge Technology",
+      "Versatile Applications",
+      "Affordable and Accessible",
+    ]
+
+  section.about-us
+    .container
+      .about-us__inner(data-parallax-box)
+        .about-us__illustration-box
+          .about-us__bg
+          .about-us__bg-light
+            +icon("light-2", 885, 785, true)
+          .about-us__illustration-wrapper(data-parallax-mouse, data-movement='20', data-duration="1")
+            +picture("content", "user-2", "png", 518, 622, "User of Head Mounted Display", true)
+          .about-us__extra-pic(data-parallax-mouse, data-movement='15')
+            +picture("content", "head-mounted-display-2", "jpg", 196, 128, "")
+        .about-us__content-box
+          +title({tag: "h2", text: "About us", mods: ["mini"]}).about-us__title
+          +title({text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.", mods: ["h2"]}).about-us__subtitle
+          .about-us__text
+            p!= "VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light."
+          ul.about-us__technology-list
+            each item in technologyList
+              li.about-us__technology-item
+                +icon("check-box-icon", 16, 16, true)
+                p!= item
+          +btn({text: "Read more", href: "#"}).about-us__btn

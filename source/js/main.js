@@ -6,6 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderFix} from './modules/header/init-header-fix';
 import {getHeaderHeight} from './modules/header/get-header-height';
 import {Burger} from './modules/header/burger';
+import {setParallax} from './modules/about-us/set-parallax.js';
 
 // ---------------------------------
 
@@ -17,6 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
   initHeaderFix();
   getHeaderHeight();
+  setParallax();
 
   // Modules
   // ---------------------------------

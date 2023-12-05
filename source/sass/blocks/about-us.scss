@@ -1,0 +1,270 @@
+.about-us {
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 615px;
+
+    @include vp-1023 {
+      display: flex;
+      align-items: flex-start;
+      min-height: 515px;
+    }
+
+    @include vp-767 {
+      flex-direction: column;
+      align-items: unset;
+    }
+  }
+
+  // Illustration
+  // ========================================>
+
+  &__illustration-box {
+    position: relative;
+
+    @include vp-1023 {
+      width: 40%;
+    }
+
+    @include vp-767 {
+      display: flex;
+      justify-content: center;
+      width: auto;
+      height: 485px;
+      margin-bottom: 48px;
+      padding-top: 0;
+      padding-bottom: 17px;
+    }
+
+    @include vp-429 {
+      justify-content: unset;
+      height: unset;
+      padding-top: 119%;
+      padding-bottom: 0;
+    }
+
+    // outline: 2px dashed red;
+  }
+
+  &__bg,
+  &__bg-light {
+    position: absolute;
+  }
+
+  &__bg {
+    top: 95px;
+    left: 0;
+    width: calc(100% / 3 * 2);
+    height: 496px;
+    background-color: $color-grayscale-black-50;
+
+    @include vp-1023 {
+      top: unset;
+      bottom: 0;
+      width: 75%;
+      height: 80%;
+    }
+
+    @include vp-767 {
+      left: 50%;
+      bottom: 17px;
+      width: 300px;
+      height: 373px;
+      transform: translateX(-190px);
+    }
+
+    @include vp-429 {
+      left: 0;
+      width: 75%;
+      height: 80%;
+      transform: none;
+    }
+  }
+
+  &__bg-light {
+    top: 0;
+    left: -100px;
+    z-index: 1;
+    width: 885px;
+    height: 785px;
+
+    @include vp-1023 {
+      top: -50px;
+      left: -160px;
+      width: 700px;
+      height: 620px;
+    }
+
+    @include vp-767 {
+      left: 50%;
+      width: 600px;
+      height: 532px;
+      transform: translateX(-35%);
+    }
+  }
+
+  &__bg-light svg {
+    fill: linear-gradient(99deg, rgba($color-deep-sky-blue, 0.5) 0.72%, rgba($color-pink-flamingo, 0.5) 90.69%);
+    filter: blur(105px);
+    width: 885px;
+    height: 785px;
+
+    @include vp-1023 {
+      width: 700px;
+      height: 620px;
+    }
+
+    @include vp-767 {
+      width: 600px;
+      height: 532px;
+    }
+  }
+
+  &__illustration-wrapper {
+    position: absolute;
+    top: -30px;
+    left: 0;
+    z-index: 2;
+    line-height: 0;
+
+    // outline: 1px dashed yellowgreen;
+
+    @include vp-1023 {
+      position: relative;
+      top: unset;
+    }
+
+    @include vp-767 {
+      height: 100%;
+      overflow: hidden;
+      transform: translateX(18px);
+    }
+
+    @include vp-429 {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transform: none;
+    }
+  }
+
+  &__illustration-wrapper img {
+    @include vp-767 {
+      width: 403px;
+      height: 485px;
+      max-height: 500px;
+      object-fit: cover;
+    }
+
+    @include vp-429 {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__extra-pic {
+    position: absolute;
+    bottom: 0;
+    right: 72px;
+    z-index: 4;
+
+    @include vp-1023 {
+      right: 0;
+      transform: translateY(50%);
+    }
+
+    @include vp-767 {
+      right: unset;
+      left: 50%;
+      transform: translateX(50px) translateY(0);
+    }
+
+    @include vp-429 {
+      right: 0;
+      left: unset;
+      transform: none;
+    }
+  }
+
+  &__extra-pic img {
+    width: 196px;
+    height: 128px;
+
+    @include vp-1023 {
+      width: 147px;
+      height: 96px;
+    }
+  }
+
+  // Content side
+  // ========================================>
+
+  &__content-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 50px;
+    padding-left: 22px;
+    z-index: 3;
+
+    @include vp-1023 {
+      width: 60%;
+      padding-top: 0;
+    }
+
+    @include vp-767 {
+      width: auto;
+    }
+  }
+
+  &__title,
+  &__subtitle {
+    margin-bottom: 12px;
+  }
+
+  &__text {
+    max-width: 530px;
+    margin-bottom: 24px;
+    color: $color-gray-2;
+  }
+
+  &__text p {
+    margin: 0;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  &__technology-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 32px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__technology-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__technology-item svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &__technology-item p {
+    margin: 0 0 0 12px;
+  }
+
+  &__btn {
+    margin-bottom: 30px;
+  }
+}

@@ -20,6 +20,12 @@
     font-size: 48px;
     font-weight: 600;
     line-height: 58px;
+
+    @include vp-1023 {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: normal;
+    }
   }
 
   &--h3 {
@@ -68,5 +74,17 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 28px;
+  }
+
+  &--mini {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.24px;
+    text-transform: uppercase;
+    background: $purple-to-blue;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
