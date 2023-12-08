@@ -8,9 +8,23 @@ let mouseCords = {
   y: 0,
 }; // задаем изначальные координаты
 
+const getMouseCordsInParralaxBox = (e) => {
+  const mouseCordX = e.pageX;
+  const mouseCordY = e.pageY;
+  const mouseCordInParralaxBoxX = mouseCordX - parallaxBox.offsetLeft;
+  const mouseCordInParralaxBoxY = mouseCordY - parallaxBox.offsetTop;
+  if (mouseCordInParralaxBoxX > 0 && mouseCordInParralaxBoxX <= parallaxBox.offsetWidth && mouseCordInParralaxBoxY > 0 && mouseCordInParralaxBoxY <= parallaxBox.offsetHeight) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
 const handleMouseMove = (e) => { // обновляет наши координаты
-  mouseCords.x = e.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
-  mouseCords.y = e.clientY - window.innerHeight / 2;
+  if (getMouseCordsInParralaxBox(e)) {
+    mouseCords.x = e.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
+    mouseCords.y = e.clientY - window.innerHeight / 2;
+  }
 };
 
 
@@ -31,4 +45,9 @@ gsap.ticker.add(updateParallax); // вместо нового requestAnimationFr
 
 export const setParallax = () => {
   parallaxBox.addEventListener('mousemove', handleMouseMove); // добавляем обработчик по движению мыши
+  // parallaxBox.addEventListener('mouseenter', () => {
+  // });
+  // parallaxBox.addEventListener('mouseleave', () => {
+  //   parallaxBox.removeEventListener('mousemove', handleMouseMove);
+  // });
 };

@@ -1,33 +1,90 @@
 .services {
-  background-color: $color-grayscale-black-50;
-  border: 1px solid rgba($color-default-white, 0.3);
-
-
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
+    gap: 30px;
+    padding: 0 0 135px 0;
     margin: 0;
-    padding: 42px 64px 53px;
     list-style: none;
 
     @include vp-1023 {
-      padding: 36px;
-      gap: 30px;
+      grid-template-columns: 1fr 1fr;
     }
 
     @include vp-767 {
       grid-template-columns: 1fr;
-      gap: 50px;
-    }
-
-    @include vp-429 {
-      padding: 20px;
+      gap: 32px;
     }
   }
 
+  &__item {
+    position: relative;
+    min-height: 291px;
+    padding: 28px 32px 25px;
+    background-color: rgba($color-nero, 0.6);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba($color-default-white, 0.3) 0%, rgba($color-default-white, 0.1) 100%);
+    border-image-slice: 1;
+    transition: border-image $trans-default;
+
+    &:nth-child(3n + 2) {
+      transform: translateY(57px);
+
+      @include vp-1023 {
+        transform: none;
+      }
+    }
+
+    &:nth-child(3n + 3) {
+      transform: translateY(135px);
+
+      @include vp-1023 {
+        transform: none;
+      }
+    }
+
+    &:nth-child(even) {
+      @include vp-1023 {
+        transform: translateY(57px);
+      }
+
+      @include vp-767 {
+        transform: none;
+      }
+    }
+
+    @include hover-focus {
+      border-image: $purple-to-blue;
+      border-image-slice: 1;
+
+      .services__button-wrapper {
+        opacity: 1;
+      }
+    }
+
+    &.is-active {
+      @include vp-1023 {
+        border-image: $purple-to-blue;
+        border-image-slice: 1;
+
+        .services__button-wrapper {
+          opacity: 1;
+        }
+
+        .services__button {
+          pointer-events: auto;
+        }
+      }
+    }
+  }
+
+  &__item svg {
+    width: 48px;
+    height: 48px;
+  }
+
   &__icon-box {
-    margin-bottom: 42px;
+    margin-bottom: 58px;
     line-height: 0;
   }
 
@@ -40,9 +97,86 @@
   }
 
   &__content-text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
     margin: 0;
     font-size: 14px;
     font-weight: 400;
     line-height: 28px;
+    overflow: hidden;
+  }
+
+  &__button-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 152px;
+    padding-bottom: 28px;
+    background: linear-gradient(180deg, rgba($color-nero, 0.0) 0%, rgba($color-nero, 0.9) 53%, $color-grayscale-black-50 100%);
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &__button {
+    background-color: rgba($color-default-white, 0.06);
+
+    @include vp-1023 {
+      pointer-events: none;
+    }
+  }
+
+  // Styles for a list of services in a general container
+  // ========================================>
+
+  &--united {
+    background-color: $color-grayscale-black-50;
+    border: 1px solid rgba($color-default-white, 0.3);
+
+    .services__list {
+      gap: 50px;
+      padding: 42px 64px 53px;
+
+      @include vp-1023 {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 36px;
+        gap: 30px;
+      }
+
+      @include vp-767 {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+
+      @include vp-429 {
+        padding: 20px;
+      }
+    }
+
+    .services__item {
+      min-height: unset;
+      background-color: transparent;
+      border: none;
+      transform: none;
+      padding: 0;
+    }
+
+    .services__icon-box {
+      margin-bottom: 42px;
+    }
+
+    svg {
+      width: 70px;
+      height: 70px;
+    }
+
+    .services__title {
+      margin-bottom: 12px;
+    }
   }
 }

@@ -1,0 +1,47 @@
+mixin our-service()
+  -
+    const serviceList = [
+      {
+        icon: "development-icon",
+        title: "VR Development",
+        text: "From concept to creation, our team of VR developers will bring your vision to life.",
+      },
+      {
+        icon: "design-icon",
+        title: "VR Design",
+        text: "Our talented VR designers will create immersive and engaging environments that will captivate your audience.",
+      },
+      {
+        icon: "consulting-icon",
+        title: "VR Consulting",
+        text: "Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations.",
+      },
+      {
+        icon: "games-icon",
+        title: "VR Games",
+        text: "We offer a wide selection of VR games that are suitable for players of all ages and skill levels.",
+      },
+      {
+        icon: "events-icon",
+        title: "VR Events",
+        text: "Make your next event unforgettable with our VR event services.",
+      },
+      {
+        icon: "entertainment-icon",
+        title: "VR Entertainment",
+        text: "reate a VR escape room, or offer VR experiences at a theme park, we have the expertise and experience to make it happen.",
+      },
+    ]
+
+  section.our-service
+    .container
+      .our-service__inner
+        +icon("light-3", 613, 619, true)
+        .our-service__header
+          .our-service__title-box
+            +title({tag: "h2", text: "Our service", mods: ["mini"]}).our-service__title
+            +title({text: "Our service", mods: ["h2"]}).our-service__subtitle
+          .our-service__text-box
+            p!= "We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have."
+        .our-service__list
+          +services(serviceList)
