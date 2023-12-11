@@ -5,18 +5,31 @@ mixin about-us()
       "Versatile Applications",
       "Affordable and Accessible",
     ]
+  -
+    const parallaxIllustration = {
+      light: {
+        fileName: "light-2",
+        width: 885,
+        height: 785,
+      },
+      mainImage: {
+        fileName: "user-2",
+        width: 518,
+        height: 622,
+        lazyLoading: true,
+      },
+      extraPic: {
+        fileName: "head-mounted-display-2",
+        width: 196,
+        height: 128,
+      }
+    }
 
   section.about-us
     .container
       .about-us__inner(data-parallax-box)
         .about-us__illustration-box
-          .about-us__bg
-          .about-us__bg-light
-            +icon("light-2", 885, 785, true)
-          .about-us__illustration-wrapper(data-parallax-mouse, data-movement='20', data-duration="1")
-            +picture("content", "user-2", "png", 518, 622, "User of Head Mounted Display", true)
-          .about-us__extra-pic(data-parallax-mouse, data-movement='15')
-            +picture("content", "head-mounted-display-2", "jpg", 196, 128, "")
+          +parallax(parallaxIllustration, "about-us-left")
         .about-us__content-box
           +title({tag: "h2", text: "About us", mods: ["mini"]}).about-us__title
           +title({text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.", mods: ["h2"]}).about-us__subtitle

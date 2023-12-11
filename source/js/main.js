@@ -8,6 +8,7 @@ import {getHeaderHeight} from './modules/header/get-header-height';
 import {Burger} from './modules/header/burger';
 import {setParallax} from './modules/parallax/set-parallax.js';
 import {showLearnMoreButton} from './modules/service-list/show-learn-more-btn.js';
+import {initAccordions} from './modules/accordion/init-accordion.js';
 
 // ---------------------------------
 
@@ -31,6 +32,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     uploadFile();
     uploadImageDrop();
+    initAccordions();
     const select = new CustomSelect();
     select.init();
     const form = new Form();
