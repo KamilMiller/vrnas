@@ -2,16 +2,22 @@ mixin video()
   section.video
     .container
       .video__inner
+        +icon("light-5", 616, 619, true)
         +title({tag: "h2", text: "How to get started", mods: ["mini"]}).video__title
-        +title({text: "Bringing Your Virtual Reality<br>Dreams to Life", mods: ["h2"]}).video__subtitle
-        .video__screen-block
-          video(class="video-js" id="video")
-            source(src="video/video.mp4" type="video/mp4")
-          //- .video__control-box
-          //-   p VR Service
-          //-   +title({tag: "h3", text: "How to get started", mods: ["h4"]}).video__control-box
-          //-   button.video__play-btn(type="button")
+        +title({text: "Bringing Your Virtual Reality Dreams to Life", mods: ["h2"]}).video__subtitle
+        .video__player-wrapper
+          .video__player
+            video(class="video__content" id="video" poster="img/content/video-poster.jpg")
+              source(src="video/video.mp4" type="video/mp4")
+          .video__info-box
+            .video__badge
+              +badge({text: "VR Service", big: true})
+            +title({tag: "h3", text: "How to get started", mods: ["h4"]}).video__control-box
+          button.video__main-play-btn(type="button" aria-label="Play video")
+            +icon("main-play-button", 100, 100)
+          .video__control-bar
+            button.video__play-btn(type="button" id="play-pause" aria-label="Play/Pause")
+              +icon("icon-play", 12, 14)(id="icon-play")
+              +icon("icon-pause", 12, 14)(id="icon-pause")
+            input(type="range" id="seek-bar" value="0").video__seek-bar
         +btn({text: "Get started"})
-
-
-

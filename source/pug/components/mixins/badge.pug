@@ -1,0 +1,8 @@
+mixin badge(options = {})
+  - const tag = options.href ? "a" : "div";
+  - const href = options.href || false;
+  - const text = options.text || "";
+  - const big = options.big || false
+
+  #{tag}.badge(href=href, class= big ? "badge--big" : null)&attributes(attributes)
+    span.badge__text!= text

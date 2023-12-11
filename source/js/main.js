@@ -9,6 +9,8 @@ import {Burger} from './modules/header/burger';
 import {setParallax} from './modules/parallax/set-parallax.js';
 import {showLearnMoreButton} from './modules/service-list/show-learn-more-btn.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
+import {setCustomVideoControl} from './modules/video/set-custom-video-control.js';
+import {changeVideoPoster} from './modules/video/change-poster.js';
 
 // ---------------------------------
 
@@ -22,6 +24,8 @@ window.addEventListener('DOMContentLoaded', () => {
   getHeaderHeight();
   setParallax();
   showLearnMoreButton();
+  setCustomVideoControl();
+  changeVideoPoster();
 
   // Modules
   // ---------------------------------

@@ -1,9 +1,11 @@
 .our-service {
-  position: relative;
+  &__inner {
+    position: relative;
+  }
 
   &__inner > svg {
     position: absolute;
-    right: 215px;
+    right: -80px;
     top: -240px;
     width: 613px;
     height: 619px;

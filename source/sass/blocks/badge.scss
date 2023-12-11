@@ -1,0 +1,27 @@
+.badge {
+  display: flex;
+  align-items: center;
+  height: 17px;
+  padding: 0 7px;
+  color: $color-default-white;
+  text-decoration: none;
+  background-color: rgba($color-default-white, 0.3);
+  border-radius: 8px;
+
+  &__text {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 14px;
+  }
+
+  &--big {
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 12px;
+
+    .badge__text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
