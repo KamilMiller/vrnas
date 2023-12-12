@@ -1,0 +1,47 @@
+mixin pricing()
+  -
+    const pricingOptionsList = [
+      {
+        title: "Customizable Packages",
+        text: "We&nbsp;understand that each project is&nbsp;unique, so&nbsp;we&nbsp;offer customizable packages to&nbsp;ensure that you get the services you need at&nbsp;a&nbsp;price that works for you. Our team will work with you to&nbsp;create a&nbsp;package that meets your specific goals and budget.",
+      },
+      {
+        title: "Flexible Payment Options",
+        text: "We&nbsp;offer flexible payment options to&nbsp;make it&nbsp;easy for you to&nbsp;get started with our services. We&nbsp;accept various payment methods, including credit cards, bank transfers, and PayPal, and we&nbsp;can also work with you to&nbsp;create a&nbsp;payment plan that suits your needs.",
+      },
+      {
+        title: "Satisfaction Guarantee",
+        text: "We&nbsp;stand behind our services and are committed to&nbsp;ensuring that you are completely satisfied with the final product. If&nbsp;for any reason you are not happy with our services, we&nbsp;will work with you to&nbsp;make it&nbsp;right or&nbsp;provide a&nbsp;full refund.",
+      },
+    ]
+
+  section.pricing
+    .container
+     .pricing__inner
+      +icon("light-6", 1103, 783, true)
+      .pricing__header
+        +title({tag: "h2", text: "Our pricing", mods: ["mini"]}).pricing__title
+        +title({text: "Affordable VR&nbsp;Services for Everyone", mods: ["h2"]}).pricing__subtitle
+        .pricing__text
+          p!= "At&nbsp;VRNas, we&nbsp;believe that everyone should have access to&nbsp;the benefits of&nbsp;VR. That&rsquo;s why we&nbsp;offer a&nbsp;range of&nbsp;pricing options to&nbsp;meet the needs of&nbsp;any budget."
+      .pricing__content-wrapper
+        .pricing__list-box
+          ul.pricing__options-list
+            each item in pricingOptionsList
+              li.pricing__options-item
+                .pricing__item-decoration-box
+                  +icon("item-marker-icon", 42, 42, true)
+                .pricing__item-content-box
+                  +title({tag: "h3", text: item.title, mods: ["h9"]}).pricing__item-title
+                  .pricing__item-text
+                    p!= item.text
+        .pricing__offer-box
+          .pricing__illustration-wrapper
+            +picture("content", "user-4", "png", 400, 546, "User of Head Mounted Display", true)
+          .pricing__offer
+            .pricing__offer-price
+              p!= "Start from<br><span>99$</span>"
+            +btn({href: "#", text: "Get started"}).pricing__offer-btn
+            p 30 Days Moneyback Guarantee
+
+

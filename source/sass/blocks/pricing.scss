@@ -1,0 +1,243 @@
+.pricing {
+  &__inner {
+    position: relative;
+  }
+
+  &__inner > svg {
+    position: absolute;
+    top: 100px;
+    right: -100px;
+    width: 1103px;
+    height: 783px;
+    fill: linear-gradient(99deg, rgba($color-deep-sky-blue, 0.80) 0.72%, rgba($color-pink-flamingo, 0.80) 90.69%);
+    filter: blur(105px);
+
+    @include vp-1023 {
+      top: unset;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 550px;
+      height: 390px;
+    }
+  }
+
+  // Header
+  // ========================================>
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    max-width: 630px;
+    margin-bottom: 40px;
+    color: $color-gray-1;
+
+    @include vp-1023 {
+      margin-bottom: 48px;
+    }
+  }
+
+  &__text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  // Content
+  // ========================================>
+
+  &__content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    background-color: rgba($color-grayscale-black-50, 0.81);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba($color-default-white, 0.3) 0%, rgba($color-default-white, 0.1) 100%);
+    border-image-slice: 1;
+
+    @include vp-1023 {
+      flex-direction: column;
+      align-items: unset;
+    }
+  }
+
+  // Price option list
+  // ========================================>
+
+  &__list-box {
+    width: 58.9%;
+    padding: 55px 25px 55px 42px;
+
+    @include vp-1023 {
+      width: 100%;
+      padding: 32px 20px 48px;
+    }
+  }
+
+  &__options-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__options-item {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 12px;
+  }
+
+  &__item-text {
+    color: $color-gray-1;
+  }
+
+  &__item-text p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  // Offer side
+  // ========================================>
+
+  &__offer-box {
+    position: relative;
+    width: 41.1%;
+    padding-top: 49%;
+
+    @include vp-1023 {
+      width: calc(100% - 44px);
+      height: 407px;
+      margin: 0 22px;
+      padding: 0;
+      border-top: 1px solid rgba($color-default-white, 0.1);
+    }
+
+    @include vp-429 {
+      height: auto;
+      padding-top: 37px;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__illustration-wrapper {
+    position: absolute;
+    top: 41px;
+    right: 0;
+    width: 81.1%;
+    height: calc(100% - 41px);
+    border-left: 1px solid rgba($color-default-white, 0.1);
+
+    @include vp-1023 {
+      top: 36px;
+      left: 50%;
+      right: unset;
+      width: 300px;
+      height: 370px;
+      border: none;
+      transform: translateX(-34%);
+    }
+
+    @include vp-429 {
+      position: relative;
+      top: unset;
+      left: unset;
+      width: 85.5%;
+      height: unset;
+      padding-top: 105.5%;
+      transform: none;
+    }
+  }
+
+  &__illustration-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__offer {
+    position: absolute;
+    top: 71.5%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 321px;
+    padding: 20px 20px 18px;
+    color: $color-gray-1;
+    background-color: $color-grayscale-black-50;
+    border: 1px solid transparent;
+    border-image: $purple-to-blue;
+    border-image-slice: 1;
+
+    @include vp-1023 {
+      top: 68%;
+      left: 50%;
+      transform: translateX(-55%);
+    }
+
+    @include vp-429 {
+      position: relative;
+      top: unset;
+      left: unset;
+      min-width: 240px;
+      padding: 15px;
+      transform: none;
+    }
+  }
+
+  &__offer-price {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  &__offer-price p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $color-gray-2;
+  }
+
+  &__offer-price span {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 66px;
+    color: $color-default-white;
+  }
+
+  &__offer-btn {
+    margin-bottom: 14px;
+  }
+
+  &__offer > p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+}
