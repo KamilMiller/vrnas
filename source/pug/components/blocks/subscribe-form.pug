@@ -1,0 +1,18 @@
+mixin subscribe-form()
+  section.subscribe-form
+    .container
+      .subscribe-form__inner
+        .subscribe-form__text
+          h2.subscribe-form__title.visually-hidden Subscribe form
+          +title({text: "Subscribe to our newsletter for latest updates", mods: ["h3"]}).subscribe-form__subtitle
+        .subscribe-form__form-box(data-form-validate data-callback="base")
+          form(action="" autocomplete="off" name="subscribe" id="subscribe-form")
+            .subscribe-form__form-inner
+              .subscribe-form__success-message.subscribe-form__success-message--hidden
+                p Your message has sent!
+              .subscribe-form__input-box(data-validate-type="email" data-on-input-validate data-message-base="Required field" data-message-extra="E-mail address is not correct" data-required)
+                label.visually-hidden(for="email") E-mail
+                input(type="email" id="email" name="email-field" placeholder="Enter your email address" required)
+                +icon("icon-email", 24, 24).subscribe-form__email-icon
+            button(type="submit").subscribe-form__button
+              +icon("icon-submit", 16, 16)

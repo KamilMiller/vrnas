@@ -32,6 +32,12 @@
     font-size: 40px;
     font-weight: 600;
     line-height: 58px;
+
+    @include vp-1023 {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: normal;
+    }
   }
 
   &--h4 {
