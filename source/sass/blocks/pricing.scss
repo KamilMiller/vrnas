@@ -1,6 +1,15 @@
 .pricing {
   &__inner {
     position: relative;
+    padding-bottom: 53px;
+
+    @include vp-1023 {
+      padding-bottom: 93px;
+    }
+
+    @include vp-429 {
+      padding-bottom: 0;
+    }
   }
 
   &__inner > svg {
