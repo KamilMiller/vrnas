@@ -1,0 +1,9 @@
+mixin page-title(title, breadcrumbsData)
+  .page-title
+    .container
+      .page-title__inner
+        +icon("light-8", 669, 367, true)
+        .page-title__content-box
+          +title({tag: "h1", text: title, mods: ["h1"]}).page-title__text
+          .page-title__breadcrumbs
+            +breadcrumbs(breadcrumbsData)

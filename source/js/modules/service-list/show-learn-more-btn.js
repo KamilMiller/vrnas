@@ -5,11 +5,7 @@ export const showLearnMoreButton = () => {
     return;
   }
 
-  let serviceCards;
-
-  serviceLists.forEach((item) => {
-    serviceCards = item.querySelectorAll('.services__item');
-  });
+  let serviceCards = document.querySelectorAll('.services__item--card');
 
   const activeServiceCardTogle = (card, evt) => {
     const target = evt.target;

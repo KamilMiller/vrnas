@@ -1,0 +1,47 @@
+.breadcrumbs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    position: relative;
+    margin-right: 26px;
+
+    &:not(:last-child) {
+      &::after {
+        content: "";
+        position: absolute;
+        right: -22px;
+        top: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 18px;
+        height: 18px;
+        font-size: 0;
+        line-height: 0;
+        background-color: transparent;
+        background-image: url("../img/svg/arrow-right.svg");
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+      color: $color-gray-2;
+    }
+  }
+
+  &__item a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__item p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}

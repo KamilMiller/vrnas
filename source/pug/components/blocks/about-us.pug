@@ -1,4 +1,4 @@
-mixin about-us()
+mixin about-us(reflected = false)
   -
     const technologyList = [
       "Cutting-Edge Technology",
@@ -25,7 +25,7 @@ mixin about-us()
       }
     }
 
-  section.about-us
+  section.about-us(class=`${reflected ? "about-us--reflected" : ""}`)
     .container
       .about-us__inner(data-parallax-box)
         .about-us__illustration-box

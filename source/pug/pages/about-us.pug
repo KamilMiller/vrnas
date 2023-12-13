@@ -8,8 +8,24 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "about-us.html"
+  -
+    const breadcrumbsData = [
+      {
+        text: "Home",
+        href: "index.html",
+      },
+      {
+        text: "About us",
+        href: false,
+      },
+    ]
 
 block main
   main
+    +page-title("About Us", breadcrumbsData)
+    .page-section
+      +partners()
+    .page-section
+      +subscribe-form()
 
 block modals

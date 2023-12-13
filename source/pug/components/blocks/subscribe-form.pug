@@ -3,7 +3,7 @@ mixin subscribe-form()
     .container
       .subscribe-form__inner
         .subscribe-form__text
-          h2.subscribe-form__title.visually-hidden Subscribe form
+          +title({tag: "h2", text: "Subscribe form", isHidden: true})
           +title({text: "Subscribe to our newsletter for latest updates", mods: ["h3"]}).subscribe-form__subtitle
         .subscribe-form__form-box(data-form-validate data-callback="base")
           form(action="" autocomplete="off" name="subscribe" id="subscribe-form")

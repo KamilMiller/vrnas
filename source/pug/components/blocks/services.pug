@@ -2,7 +2,7 @@ mixin services(list, united = false)
   .services(class=united ? "services--united" : "")
     ul.services__list(class= united ? null : "services__list--cards")
       each item in list
-        li.services__item
+        li.services__item(class=`${united ? "" : "services__item--card"}`)
           .services__icon-box
             +icon(item.icon, 70, 70, true)
           .services__content-wrapper
