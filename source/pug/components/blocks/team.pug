@@ -1,0 +1,44 @@
+mixin team()
+  -
+    const teamList = [
+      {
+        name: "Bondan Prabowo",
+        position: "CEO",
+        image: "portrait-4",
+      },
+      {
+        name: "Bayu Aji",
+        position: "VR Development",
+        image: "portrait-5",
+      },
+      {
+        name: "Agung Brandon",
+        position: "VR Artist",
+        image: "portrait-6",
+      },
+      {
+        name: "Aril Laso",
+        position: "UI / UX Designer",
+        image: "portrait-7",
+      },
+    ]
+
+  section.team
+    .container
+      .team__inner
+        .team__header
+          +title({tag: "h2", text: "Our team", mods: ["mini"]}).team__title
+          +title({text: "Our Professionals Team", mods: ["h2"]}).team__subtitle
+        ul.team__list
+          each item in teamList
+            li.team__card
+              .team__card-inner
+                +picture("content", item.image, "jpg", 274, 370, `${item.positon} ${item.name}`)
+                .team__card-gradient
+                .team__info-box
+                  p!= item.name
+                  span!= item.position
+        +btn({href: "#", text: "See all", mods: ["transparent"]}).team__button
+
+
+

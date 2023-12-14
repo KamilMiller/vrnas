@@ -6,7 +6,7 @@ import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderFix} from './modules/header/init-header-fix';
 import {getHeaderHeight} from './modules/header/get-header-height';
 import {Burger} from './modules/header/burger';
-// import {setParallax} from './modules/parallax/set-parallax.js';
+import {setParallax} from './modules/parallax/set-parallax.js';
 import {showLearnMoreButton} from './modules/service-list/show-learn-more-btn.js';
 import {initAccordions} from './modules/accordion/init-accordion.js';
 import {setCustomVideoControl} from './modules/video/set-custom-video-control.js';
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', () => {
   mobileVhFix();
   initHeaderFix();
   getHeaderHeight();
-  // setParallax();
+  setParallax();
   showLearnMoreButton();
   setCustomVideoControl();
   changeVideoPoster();

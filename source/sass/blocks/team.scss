@@ -1,0 +1,125 @@
+.team {
+  &__inner {
+    position: relative;
+
+    @include vp-767 {
+      padding-bottom: 82px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 200px;
+
+    @include vp-767 {
+      align-items: center;
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 12px;
+  }
+
+  &__subtitle {
+    margin-bottom: 41px;
+
+    @include vp-767 {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__button-box {
+    margin-left: 30px;
+  }
+
+  &__button {
+    position: absolute;
+    top: 37px;
+    right: 0;
+    z-index: 1;
+
+    @include vp-767 {
+      top: unset;
+      bottom: 0;
+      left: 50%;
+      right: unset;
+      transform: translate(-50%);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px; // ==========> Need to check for iOS / Safari
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__card {
+    width: 290px;
+    height: 386px;
+    padding: 8px;
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba($color-default-white, 0.3) 0%, rgba($color-default-white, 0.1) 100%);
+    border-image-slice: 1;
+    transition: border-image $trans-default;
+
+    @include hover {
+      border-image: $purple-to-blue;
+      border-image-slice: 1;
+    }
+  }
+
+  &__card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: 0;
+    overflow: hidden;
+  }
+
+  &__card-inner img,
+  &__card-gradient,
+  &__info-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__card-gradient {
+    z-index: 1;
+    background: linear-gradient(180deg, rgba($color-cerulean-blue, 0) 0%, $color-midnight-blue 100%);
+  }
+
+  &__info-box {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 9px;
+  }
+
+  &__info-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  &__info-box span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-gray-1
+  }
+}
