@@ -16,6 +16,7 @@ mixin advantages()
     ];
   -
     const parallaxIllustration = {
+      mod: "advantages-right",
       light: {
         fileName: "light-4",
         width: 837,
@@ -49,5 +50,5 @@ mixin advantages()
                   .advantages__accordion-wrapper
                     p!= item.text
         .advantages__illustration-box
-          +parallax(parallaxIllustration, "advantages-right")
+          +parallax(parallaxIllustration)
 

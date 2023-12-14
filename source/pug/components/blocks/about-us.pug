@@ -1,43 +1,20 @@
-mixin about-us(reflected = false)
-  -
-    const technologyList = [
-      "Cutting-Edge Technology",
-      "Versatile Applications",
-      "Affordable and Accessible",
-    ]
-  -
-    const parallaxIllustration = {
-      light: {
-        fileName: "light-2",
-        width: 885,
-        height: 785,
-      },
-      mainImage: {
-        fileName: "user-2",
-        width: 518,
-        height: 622,
-        lazyLoading: true,
-      },
-      extraPic: {
-        fileName: "head-mounted-display-2",
-        width: 196,
-        height: 128,
-      }
-    }
-
+mixin about-us(data, reflected = false)
   section.about-us(class=`${reflected ? "about-us--reflected" : ""}`)
     .container
       .about-us__inner(data-parallax-box)
         .about-us__illustration-box
-          +parallax(parallaxIllustration, "about-us-left")
+          +parallax(data.parallaxIllustration)
         .about-us__content-box
           +title({tag: "h2", text: "About us", mods: ["mini"]}).about-us__title
-          +title({text: "Bring your events to&nbsp;life like never before with our&nbsp;VR services.", mods: ["h2"]}).about-us__subtitle
+          +title({text: data.subtitle, mods: ["h2"]}).about-us__subtitle
           .about-us__text
-            p!= "VRNas is&nbsp;a&nbsp;leading provider of&nbsp;VR services for education, entertainment, architecture, and events. Our mission is&nbsp;to&nbsp;bring the power of&nbsp;virtual reality to&nbsp;everyone, allowing them to&nbsp;explore new worlds, learn in&nbsp;new ways, and experience events in&nbsp;a&nbsp;whole new light."
-          ul.about-us__technology-list
-            each item in technologyList
-              li.about-us__technology-item
-                +icon("check-box-icon", 16, 16, true)
-                p!= item
-          +btn({text: "Read more", href: "#"}).about-us__btn
+            each paragraph in data.text
+              p!= paragraph
+          if data.technologyList
+            ul.about-us__technology-list
+              each item in data.technologyList
+                li.about-us__technology-item
+                  +icon("check-box-icon", 16, 16, true)
+                  p!= item
+          if data.readMoreBtn
+            +btn({text: "Read more", href: "#"}).about-us__btn

@@ -40,6 +40,8 @@
   }
 
   &__bg-light svg {
+    width: 100%;
+    height: 100%;
     fill: linear-gradient(99deg, rgba($color-deep-sky-blue, 0.5) 0.72%, rgba($color-pink-flamingo, 0.5) 90.69%);
     filter: blur(105px);
   }
@@ -152,9 +154,6 @@
     }
 
     .parallax__bg-light svg {
-      width: 100%;
-      height: 100%;
-
       @include vp-1023 {
         width: 700px;
         height: 620px;
@@ -203,6 +202,109 @@
         width: 147px;
         height: 96px;
       }
+    }
+  }
+
+  // Section "About Us". Right Side.
+  // ===================================================>
+
+  &--about-us-right {
+    width: 94.5%;
+    padding-top: 109.1%;
+
+    @include vp-767 {
+      width: 100%;
+      height: 453px;
+      padding-top: 0;
+    }
+
+    @include vp-429 {
+      height: unset;
+      padding-top: 114%;
+    }
+
+    .parallax__inner {
+      @include vp-767 {
+        left: 50%;
+        width: 315px;
+        transform: translateX(-50%);
+      }
+
+      @include vp-429 {
+        left: 0;
+        width: 100%;
+        transform: none;
+      }
+    }
+
+    .parallax__bg {
+      bottom: 0;
+      right: 0;
+      width: 80.5%;
+      height: 86.7%;
+
+      @include vp-767 {
+        right: -41px;
+        width: 315px;
+        height: 393px;
+      }
+
+      @include vp-429 {
+        right: 0;
+        width: 80.5%;
+        height: 86.7%;
+      }
+    }
+
+    .parallax__bg-light {
+      top: 50%;
+      left: 50%;
+      width: 178%;
+      height: 137%;
+      transform: translate(-30%, -50%);
+    }
+
+    .parallax__illustration-wrapper {
+      right: 18px;
+      width: 80.2%;
+      height: 100%;
+
+      @include vp-767 {
+        right: -25px;
+        width: 100%;
+      }
+
+      @include vp-429 {
+        left: 50%;
+        right: unset;
+        width: 80.2%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .parallax__illustration-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .parallax__extra-pic {
+      bottom: -33px;
+      left: 0;
+
+      @include vp-767 {
+        bottom: -25px;
+        left: -42px;
+      }
+
+      @include vp-429 {
+        left: 0;
+      }
+    }
+
+    .parallax__extra-pic img {
+      width: 154px;
+      height: 101px;
     }
   }
 
@@ -260,11 +362,6 @@
       height: 118.6%;
       top: 0%;
       left: -15%;
-    }
-
-    .parallax__bg-light svg {
-      width: 100%;
-      height: 100%;
     }
 
     .parallax__illustration-wrapper {
