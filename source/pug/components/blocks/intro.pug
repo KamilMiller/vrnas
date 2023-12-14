@@ -2,24 +2,24 @@ mixin intro()
   -
     const clientList = ["portrait-1", "portrait-2", "portrait-3"]
 
-  -
-    const serviceList = [
-      {
-        icon: "expertise-icon",
-        title: "Expertise",
-        text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
-      },
-      {
-        icon: "customisation-icon",
-        title: "Customization",
-        text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
-      },
-      {
-        icon: "service-icon",
-        title: "Service",
-        text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
-      },
-    ]
+  //- -
+  //-   const serviceList = [
+  //-     {
+  //-       icon: "expertise-icon",
+  //-       title: "Expertise",
+  //-       text: "Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;passion for&nbsp;VR and a&nbsp;commitment to&nbsp;delivering quality work and give the best service",
+  //-     },
+  //-     {
+  //-       icon: "customisation-icon",
+  //-       title: "Customization",
+  //-       text: "Every client is&nbsp;unique, and we&nbsp;believe every&nbsp;VR experience should be&nbsp;too. We&rsquo;ll work with you to&nbsp;create a&nbsp;customized solution that meets your specific needs and goals",
+  //-     },
+  //-     {
+  //-       icon: "service-icon",
+  //-       title: "Service",
+  //-       text: "We&nbsp;believe in&nbsp;providing exceptional customer service, from initial consultation to&nbsp;final delivery. Our goal is&nbsp;to&nbsp;ensure you&rsquo;re satisfied with every aspect of&nbsp;your&nbsp;VR experience.",
+  //-     },
+  //-   ]
 
   section.intro
     .intro__bg-element.intro__bg-element--grid
@@ -48,4 +48,4 @@ mixin intro()
         .intro__illustration-box
           .intro__illustration-wrapper
             +picture("content", "user-1", "png", 526, 626, "User of Head Mounted Display")
-      +services(serviceList, true)
+      +services(shortServiceList, true)

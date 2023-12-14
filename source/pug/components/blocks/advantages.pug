@@ -1,48 +1,12 @@
-mixin advantages()
-  -
-    const advantagesList = [
-      {
-        title: "Passionate and Experienced Team",
-        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
-      },
-      {
-        title: "Customized Solutions",
-        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
-      },
-      {
-        title: "Exceptional Customer Service",
-        text: "We&nbsp;are proud of&nbsp;our team of&nbsp;VR experts who are passionate about&nbsp;VR and dedicated to&nbsp;delivering the highest quality work. Our team consists of&nbsp;experienced&nbsp;VR developers, designers, and technicians who have a&nbsp;proven track record of&nbsp;creating immersive and engaging&nbsp;VR experiences.",
-      },
-    ];
-  -
-    const parallaxIllustration = {
-      mod: "advantages-right",
-      light: {
-        fileName: "light-4",
-        width: 837,
-        height: 785,
-      },
-      mainImage: {
-        fileName: "user-3",
-        width: 563,
-        height: 622,
-        lazyLoading: true,
-      },
-      extraPic: {
-        fileName: "head-mounted-display-3",
-        width: 196,
-        height: 128,
-      }
-    }
-
-  section.advantages
+mixin advantages(data)
+  section.advantages(class=`${data.reflected ? "advantages--reflected" : ""}`)
     .container
       .advantages__inner(data-parallax-box)
         .advantages__content-box
-          +title({tag: "h2", text: "Why choose us", mods: ["mini"]}).advantages__title
-          +title({text: "Why Choose Us&nbsp;for Your VR&nbsp;Needs", mods: ["h2"]}).advantages__subtitle
+          +title({tag: "h2", text: data.title, mods: ["mini"]}).advantages__title
+          +title({text: data.subtitle, mods: ["h2"]}).advantages__subtitle
           .advantages__accordion(data-accordion="parent", data-single)
-            each item in advantagesList
+            each item in data.advantagesList
               .advantages__accordion-element.is-active(data-accordion="element")
                 button.advantages__accordion-button(type="button", data-accordion="button")!= item.title
                   +icon("arrow-down", 12, 12)
@@ -50,5 +14,4 @@ mixin advantages()
                   .advantages__accordion-wrapper
                     p!= item.text
         .advantages__illustration-box
-          +parallax(parallaxIllustration)
-
+          +parallax(data.parallaxIllustration)

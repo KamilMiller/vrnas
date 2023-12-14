@@ -1,5 +1,5 @@
-mixin about-us(data, reflected = false)
-  section.about-us(class=`${reflected ? "about-us--reflected" : ""}`)
+mixin about-us(data)
+  section.about-us(class=`${data.reflected ? "about-us--reflected" : ""}`)
     .container
       .about-us__inner(data-parallax-box)
         .about-us__illustration-box
