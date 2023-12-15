@@ -1,0 +1,15 @@
+mixin blog-item(breadcrumbsData)
+  .blog-item
+    .container
+      .blog-item__inner
+        +title({tag: "h2", text: "Blog post", isHidden: true})
+        +icon("light-9", 430, 318, true)
+        .blog-item__breadcrumbs-wrapper
+          +breadcrumbs(breadcrumbsData)
+        .blog-item__article-box
+          +article()
+        .blog-item__aside-box
+          +aside()
+
+
+

@@ -42,4 +42,31 @@
     height: 44px;
     background-color: $color-grayscale-black-100;
   }
+
+  &--without-border {
+    align-items: center;
+
+    .socials__item {
+      width: unset;
+      height: unset;
+      border: none;
+      background: transparent;
+      margin-right: 18px;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .socials__item svg {
+      width: auto;
+      height: 100%;
+    }
+
+    .socials__link {
+      width: auto;
+      height: 22px;
+    }
+  }
 }

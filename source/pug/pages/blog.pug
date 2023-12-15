@@ -8,8 +8,26 @@ block variables
   - const hasFooter = true
   - const footerMods = ""
   - const currentUrl = "blog.html"
+  -
+    const breadcrumbsData = [
+      {
+        text: "Home",
+        href: "index.html",
+      },
+      {
+        text: "Blog",
+        href: "#",
+      },
+      {
+        text: "Bringing Designs to Life: How VR is Changing Architecture",
+        href: false,
+      },
+    ]
 
 block main
   main
+    +blog-item(breadcrumbsData)
+    .page-section
+      +subscribe-form()
 
 block modals

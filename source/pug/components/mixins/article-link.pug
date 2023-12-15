@@ -1,0 +1,8 @@
+mixin article-link(data)
+  .article-link(href="#")
+    .article-link__inner
+      .article-link__image-box
+        +picture("content", data.image, "jpg", 102, 65, "")
+      .article-link__content-box
+        +badge({text: data.tag}).article-link__badge
+        p!= data.text

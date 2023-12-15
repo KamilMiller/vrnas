@@ -1,0 +1,51 @@
+mixin aside()
+  -
+    const articleList = [
+      {
+        image: "head-mounted-display-3",
+        tag: "VR Education",
+        text: "The Future of Education: How VR is Revolutionizing the Classroom",
+      },
+      {
+        image: "article-pic-1",
+        tag: "VR Architecture",
+        text: "Bringing Designs to Life: How VR is Changing Architecture",
+      },
+      {
+        image: "head-mounted-display-4",
+        tag: "VR Entertainment ",
+        text: "Making Events Memorable: The Power of VR for Corporate and Special Occasions",
+      },
+      {
+        image: "event",
+        tag: "VR Event",
+        text: "Exploring New Worlds: The Benefits of VR Travel",
+      },
+    ]
+
+  -
+    const tagsList = [
+      "#VRDesign",
+      "#ArchitectureInnovation",
+      "#DesignThinking",
+      "#VirtualRealityArchitecture",
+      "#BringingDesignsToLife",
+      "#DesignVisualization",
+      "#ArchitecturalVisualization",
+      "#RevolutionizingArchitecture",
+      "#BuildingInVR",
+    ]
+
+  aside.sidebar
+    .sidebar__article-list-box
+      +title({tag: "h3", text: "Recent Article", mods: ["h8"]}).sidebar__title
+      ul.sidebar__article-list
+        each item in articleList
+          li.sidebar__article-list-item
+            +article-link(item)
+    .sidebar__tag-list-box
+      +title({tag: "h3", text: "Popular Hashtag", mods: ["h8"]}).sidebar__title
+      ul.sidebar__tag-list
+        each item in tagsList
+          li.sidebar__tag-list-item
+            +badge({text: item})

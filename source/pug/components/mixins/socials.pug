@@ -1,5 +1,5 @@
-mixin socials(data)
-  .socials&attributes(attributes)
+mixin socials(data, withoutBorder = false)
+  .socials(class=`${withoutBorder ? "socials--without-border" : ""}`)&attributes(attributes)
     ul.socials__list
       each item in data
         li.socials__item

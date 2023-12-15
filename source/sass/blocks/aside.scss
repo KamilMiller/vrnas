@@ -1,0 +1,40 @@
+.sidebar {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__article-list,
+  &__tag-list {
+    margin: 0 0 60px 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__article-list-item {
+    margin-bottom: 24px;
+    border-bottom: 1px solid rgba($color-default-white, 0.15);
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+    }
+  }
+
+  &__tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    @include vp-1023 {
+      margin-bottom: 0;
+    }
+  }
+
+  &__tag-list-item {
+    margin-right: 12px;
+    margin-bottom: 12px;
+  }
+}
