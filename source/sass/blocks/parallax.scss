@@ -114,7 +114,7 @@
     }
 
     .parallax__bg {
-      bottom: 0;
+      bottom: 4px;
       left: 0;
       width: 81%;
       height: 84%;
@@ -124,6 +124,7 @@
       }
 
       @include vp-767 {
+        bottom: 1px;
         width: 300px;
         height: 373px;
       }
@@ -168,13 +169,14 @@
     }
 
     .parallax__illustration-wrapper {
-      bottom: 0;
+      bottom: 4px;
       left: 24px;
       width: 105%;
       height: 105%;
 
       @include vp-767 {
-        left: 17px;
+        bottom: 1px;
+        left: 14px;
         width: 100%;
         height: 100%;
       }
@@ -190,7 +192,7 @@
     }
 
     .parallax__extra-pic {
-      bottom: -23px;
+      bottom: -18px;
       right: -35px;
 
       @include vp-1023 {
@@ -200,7 +202,7 @@
 
       @include vp-767 {
         bottom: -17px;
-        right: 0;
+        right: -3px;
       }
     }
   }
@@ -244,7 +246,7 @@
       height: 86.7%;
 
       @include vp-767 {
-        right: -41px;
+        right: -36px;
         width: 315px;
         height: 393px;
       }
@@ -270,7 +272,7 @@
       height: 100%;
 
       @include vp-767 {
-        right: -25px;
+        right: -22px;
         width: 100%;
       }
 
@@ -371,8 +373,8 @@
       @include vp-767 {
         top: unset;
         bottom: 0;
-        // left: -50%;
-        left: 0;
+        left: -11px;
+        // left: 0;
         width: 105.5%;
         height: 105.5%;
         // transform: translateX(-50%);
@@ -444,8 +446,10 @@
     }
 
     .parallax__illustration-wrapper {
-      bottom: 0;
+      bottom: -8px;
       left: 30px;
+      width: 102%;
+      height: 102%;
 
       @include vp-767 {
         left: -2px;
@@ -468,6 +472,7 @@
       transform: translateX(-51%);
 
       @include vp-767 {
+        bottom: -9px;
         width: 325px;
         height: 405px;
         transform: translateX(-58%);
@@ -491,14 +496,14 @@
       right: -14px;
 
       @include vp-767 {
-        bottom: -42px;
+        bottom: -51px;
         right: 5px;
+        width: 160px;
+        height: 104px;
       }
 
       @include vp-429 {
         right: 0;
-        width: 160px;
-        height: 104px;
       }
     }
   }

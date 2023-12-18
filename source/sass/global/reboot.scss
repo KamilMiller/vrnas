@@ -18,6 +18,7 @@ html {
   line-height: 24px;
   font-family: $ff-chakra;
   color: $color-default-white;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -136,5 +137,4 @@ button,
     --header-height: 116px;
     --intro-light-top: 186px;
   }
-
 }

@@ -20,6 +20,7 @@
     font-size: 48px;
     font-weight: 600;
     line-height: 58px;
+    letter-spacing: -0.24px;
 
     @include vp-1023 {
       font-size: 32px;
@@ -32,6 +33,7 @@
     font-size: 40px;
     font-weight: 600;
     line-height: 58px;
+    letter-spacing: -0.2px;
 
     @include vp-1023 {
       font-size: 28px;
@@ -44,11 +46,13 @@
     font-size: 36px;
     font-weight: 500;
     line-height: 44px;
+    letter-spacing: -0.72px;
 
     @include vp-1023 {
       font-size: 20px;
       font-weight: 500;
       line-height: normal;
+      letter-spacing: 0;
     }
   }
 

@@ -4,7 +4,7 @@ mixin parallax(data)
       .parallax__bg
       .parallax__bg-light
         +icon(data.light.fileName, data.light.width, data.light.height, true)
-      .parallax__illustration-wrapper(data-parallax-mouse, data-movement='20', data-duration="1")
+      .parallax__illustration-wrapper(data-parallax-mouse, data-movement="20", data-duration="1")
         +picture("content", data.mainImage.fileName, "png", data.mainImage.width, data.mainImage.height, "User of Head Mounted Display", data.mainImage.lazyLoading)
-      .parallax__extra-pic(data-parallax-mouse, data-movement='15')
+      .parallax__extra-pic(data-parallax-mouse, data-movement="15")
         +picture("content", data.extraPic.fileName, "jpg", data.extraPic.width, data.extraPic.height, "")

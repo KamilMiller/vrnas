@@ -1,5 +1,4 @@
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
-import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
@@ -11,6 +10,8 @@ import {showLearnMoreButton} from './modules/service-list/show-learn-more-btn.js
 import {initAccordions} from './modules/accordion/init-accordion.js';
 import {setCustomVideoControl} from './modules/video/set-custom-video-control.js';
 import {changeVideoPoster} from './modules/video/change-poster.js';
+import {generateTimeline} from './modules/lifting-by-scroll/set-lifting-by-scroll.js';
+import {setTopBlockLifting} from './modules/lifting-by-scroll/set-top-block-lifting.js';
 
 // ---------------------------------
 
@@ -26,6 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
   showLearnMoreButton();
   setCustomVideoControl();
   changeVideoPoster();
+  generateTimeline();
+  setTopBlockLifting();
 
   // Modules
   // ---------------------------------
@@ -33,7 +36,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
     uploadFile();
     uploadImageDrop();
     initAccordions();

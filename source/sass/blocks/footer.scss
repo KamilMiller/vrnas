@@ -1,13 +1,13 @@
 .footer {
   z-index: 1;
-  
+
   &__inner {
     display: grid;
-    grid-template-columns: 124fr 412px 112fr;
+    grid-template-columns: 130fr 412px 110fr;
     grid-template-rows: 121px 1fr;
     gap: 40px;
     height: 100%;
-    padding-top: 118px;
+    padding-top: 184px;
 
     @include vp-1279 {
       grid-template-columns: 124fr 375px 112fr;
@@ -23,6 +23,7 @@
       grid-template-rows: max-content max-content 1fr;
       column-gap: 20px;
       row-gap: 36px;
+      padding-top: 83px;
     }
   }
 
@@ -103,6 +104,10 @@
     justify-content: center;
     align-items: center;
     margin-right: 8px;
+
+    @include vp-767 {
+      margin-right: 11px;
+    }
   }
 
   &__link-text-box p {
@@ -140,6 +145,7 @@
 
     @include vp-767 {
       min-height: 81px;
+      padding-top: 28px;
     }
   }
 

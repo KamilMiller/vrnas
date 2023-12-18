@@ -12,19 +12,26 @@ block variables
 block main
   main
     +intro()
-    .page-section
-      +about-us(homePageAboutData)
-    .page-section
-      +our-service(homePageOurServiceData, serviceList)
-    .page-section
-      +advantages(homePageAdvantagesData)
-    .page-section
-      +video()
-    .page-section
-      +pricing()
-    .page-section
-      +partners()
-    .page-section
-      +subscribe-form()
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +about-us(homePageAboutData)
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +our-service(homePageOurServiceData, serviceList)
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +advantages(homePageAdvantagesData)
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +video()
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +pricing()
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +partners()
+    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        +subscribe-form()
 
 block modals

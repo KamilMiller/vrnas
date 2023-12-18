@@ -4,6 +4,8 @@
     grid-template-columns: 1fr 1fr;
     gap: 74px;
 
+    min-height: 700px;
+
     @include vp-1023 {
       gap: 30px;
     }
@@ -19,11 +21,15 @@
   // ========================================>
 
   &__content-box {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
+    padding-top: 95px;
 
     @include vp-767 {
       order: 2;
+      padding-top: 0;
     }
   }
 
@@ -36,9 +42,22 @@
     margin-bottom: 20px;
   }
 
+  &__accordion {
+    padding-right: 15px;
+
+    @include vp-767 {
+      padding-right: 0;
+    }
+  }
+
   &__accordion-element {
     display: flex;
     flex-direction: column;
+    margin-bottom: 36px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__accordion-button {
@@ -71,6 +90,10 @@
     top: 50%;
     transform: translateY(-50%);
     transition: transform $trans-default;
+
+    @include vp-767 {
+      right: 9px;
+    }
   }
 
   &__accordion-element.is-active svg {
@@ -82,7 +105,8 @@
   }
 
   &__accordion-wrapper p {
-    margin: 12px 0 36px 0;
+    margin-top: 12px;
+    margin-bottom: 0;
     font-size: 16px;
     font-weight: 400;
     line-height: 28px;
@@ -97,6 +121,7 @@
     @include vp-767 {
       order: 1;
       margin-bottom: 75px;
+      padding-top: 25px;
     }
   }
 
@@ -106,6 +131,7 @@
   &--reflected {
     .advantages__inner {
       gap: 20px;
+      min-height: 625px;
     }
 
     .advantages__content-box {
@@ -118,9 +144,18 @@
       }
     }
 
+    .advantages__accordion {
+      padding-right: 0;
+    }
+
     .advantages__illustration-box {
       order: 1;
       margin-bottom: 52px;
+
+      @include vp-767 {
+        margin-bottom: 79px;
+        padding-top: 0;
+      }
     }
   }
 }

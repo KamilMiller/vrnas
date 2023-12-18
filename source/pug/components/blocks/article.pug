@@ -14,12 +14,12 @@ mixin article()
     ]
 
   .article
-    +badge({text: "VR Architecture"}).article__badge
+    +badge({text: "VR Architecture", big: true}).article__badge
     +title({tag: "h3", text: "Bringing Designs to Life: How VR is Changing Architecture", mods: ["h3"]}).article__title
     .article__publication-data
       p
         | Nasyiya Ulfa |
-        time(pubdate datetime="2022-11-25") 25 Nov 2022
+        time(pubdate, datetime="2022-11-25") 25 Nov 2022
     .article__picture
       +picture("content", "article-pic-1", "jpg", 789, 528, "In VR")
     p!= "Architecture is&nbsp;an&nbsp;art and science that is&nbsp;constantly evolving with technology. The industry has gone through various transformations over the years, from pencil and paper sketches to&nbsp;computer-aided design (CAD) software. However, one technology that is&nbsp;revolutionizing architecture is&nbsp;virtual reality (VR) design."
@@ -46,7 +46,3 @@ mixin article()
         {iconName: "icon-fb",href: "#/", label: "Facebook"},
         {iconName: "icon-ig", href: "#/", label: "Instagram"},
       ], true)
-
-
-
-

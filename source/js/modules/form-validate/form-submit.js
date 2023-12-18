@@ -16,4 +16,3 @@ export const showSuccesFubmitFormMessage = () => {
   emailInputElement.classList.add('subscribe-form__input-box--hidden');
   setTimeout(displayMessage, 300);
 };
-

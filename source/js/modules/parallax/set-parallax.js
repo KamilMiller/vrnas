@@ -8,23 +8,9 @@ let mouseCords = {
   y: 0,
 }; // задаем изначальные координаты
 
-const getMouseCordsInParralaxBox = (evt, element) => {
-  const mouseCordX = evt.pageX;
-  const mouseCordY = evt.pageY;
-  const mouseCordInParralaxBoxX = mouseCordX - element.offsetLeft;
-  const mouseCordInParralaxBoxY = mouseCordY - element.offsetTop;
-  if (mouseCordInParralaxBoxX > 0 && mouseCordInParralaxBoxX <= element.offsetWidth && mouseCordInParralaxBoxY > 0 && mouseCordInParralaxBoxY <= element.offsetHeight) {
-    return true;
-  } else {
-    return false;
-  }
-};
-
-const handleMouseMove = (evt, element) => { // обновляет наши координаты
-  if (getMouseCordsInParralaxBox(evt, element)) {
-    mouseCords.x = evt.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
-    mouseCords.y = evt.clientY - window.innerHeight / 2;
-  }
+const handleMouseMove = (evt) => { // обновляет наши координаты
+  mouseCords.x = evt.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
+  mouseCords.y = evt.clientY - window.innerHeight / 2;
 };
 
 

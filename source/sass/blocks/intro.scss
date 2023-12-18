@@ -1,6 +1,8 @@
 .intro {
   position: relative;
   overflow: hidden;
+  transform: translateY(200px);
+  opacity: 0;
 
   &__bg-element {
     position: absolute;
@@ -198,7 +200,6 @@
     }
 
     @include vp-767 {
-      transform: none;
       bottom: -271px;
       left: 30px;
       right: unset;

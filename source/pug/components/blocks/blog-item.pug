@@ -1,5 +1,5 @@
 mixin blog-item(breadcrumbsData)
-  .blog-item
+  .blog-item(data-top-block)
     .container
       .blog-item__inner
         +title({tag: "h2", text: "Blog post", isHidden: true})
@@ -10,6 +10,3 @@ mixin blog-item(breadcrumbsData)
           +article()
         .blog-item__aside-box
           +aside()
-
-
-
