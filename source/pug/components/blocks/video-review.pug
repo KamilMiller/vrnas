@@ -1,0 +1,19 @@
+mixin video-review()
+  -
+    const videoData = {
+      videoTitle: "How to get started",
+      badgeTest: "VR Service",
+      videoFile: "video.mp4",
+      videoType: "video/mp4",
+      posterfile: "video-poster.jpg",
+    }
+
+  section.video-review
+    .container
+      .video-review__inner
+        +icon("light-5", 616, 619, true)
+        +title({tag: "h2", text: "How to get started", mods: ["mini"]}).video-review__title
+        +title({text: "Bringing Your Virtual Reality Dreams to Life", mods: ["h2"]}).video-review__subtitle
+        .video-review__player-wrapper
+          +video(videoData)
+        +btn({text: "Get started"})

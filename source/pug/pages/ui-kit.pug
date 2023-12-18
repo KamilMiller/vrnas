@@ -22,9 +22,15 @@ block main
             li
               a(href="#buttons") Buttons
             li
-              a(href="#titles") Buttons
+              a(href="#titles") Titles
             li
-              a(href="#forms") Form elements
+              a(href="#badges") Badges
+            li
+              a(href="#form") Subscribe form
+            li
+              a(href="#video") Video
+            li
+              a(href="#socials") Socials
 
       //----------------------------------------------
       .container
@@ -118,6 +124,13 @@ block main
               code(class="language-pug").
                 +title({tag: "h2", mods: ["h2"], text: "Title"})
           .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--mini
+            +title({tag: "h2", mods: ["mini"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h2", mods: ["mini"], text: "Title"})
+          .uikit__component
             p.uikit__text.uikit__text--class .title \ .title--h3
             +title({tag: "h3", mods: ["h3"], text: "Title"})
             pre
@@ -145,102 +158,116 @@ block main
               |
               code(class="language-pug").
                 +title({tag: "h6", mods: ["h6"], text: "Title"})
-
-        //- Элементы форм
-        section.uikit__section(id="forms")
-          h2.uikit__h2 Form elements
           .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="text"
-            +custom-input({
-              inputLabel: "Введите ваше имя",
-              inputName: "user-name-1",
+            p.uikit__text.uikit__text--class .title \ .title--h6
+            +title({tag: "h6", mods: ["h7"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h6", mods: ["h7"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h4
+            +title({tag: "h6", mods: ["h8"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h6", mods: ["h8"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h5
+            +title({tag: "h6", mods: ["h9"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h6", mods: ["h9"], text: "Title"})
+          .uikit__component
+            p.uikit__text.uikit__text--class .title \ .title--h6
+            +title({tag: "h6", mods: ["h10"], text: "Title"})
+            pre
+              |
+              code(class="language-pug").
+                +title({tag: "h6", mods: ["h10"], text: "Title"})
+
+        //- Budges
+        section.uikit__section(id="badges")
+          h2.uikit__h2 Badges
+          .uikit__component
+            p.uikit__text.uikit__text--class .badge
+            +badge({text: "#sometag"})
+            pre
+              |
+              code(class="language-pug").
+                +badges({text: "#sometag"})
+          .uikit__component
+            p.uikit__text.uikit__text--class a.badge
+            +badge({href: "#", text: "#sometag"})
+            pre
+              |
+              code(class="language-pug").
+                +badges({href: "#", text: "#sometag"})
+          .uikit__component
+            p.uikit__text.uikit__text--class badge--big
+            +badge({text: "#populartag", big: true})
+            pre
+              |
+              code(class="language-pug").
+                +badges({text: "#populartag", big: true})
+
+        //-  Subscribe form
+        section.uikit__section(id="form")
+          h2.uikit__h2 Subscribe form
+          .uikit__component
+            p.uikit__text.uikit__text--class .subscribe-form
+            .bg-gradient
+              +subscribe-form()
+            pre
+              |
+              code(class="language-pug").
+                +subscribe-form()
+
+        //-  Video
+        section.uikit__section(id="video")
+          h2.uikit__h2 Video
+          .uikit__component
+            p.uikit__text.uikit__text--class .video
+            +video({
+              videoTitle: "How to get started",
+              badgeTest: "VR Service",
+              videoFile: "video.mp4",
+              videoType: "video/mp4",
+              posterfile: "video-poster.jpg",
             })
             pre
               |
               code(class="language-pug").
-                +custom-input({
-                  inputLabel: "Введите ваше имя",
-                  inputName: "user-name-1",
+                +video({
+                  videoTitle: "How to get started",
+                  badgeTest: "VR Service",
+                  videoFile: "video/video.mp4",
+                  videoType: "video/mp4",
+                  posterfile: "video-poster.jpg",
                 })
-          .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="tel"
-            +custom-input({
-              inputType: "tel",
-              inputLabel: "Введите номер телефона",
-              inputName: "user-phone",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputType: "tel",
-                  inputLabel: "Введите номер телефона",
-                  inputName: "user-phone",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class .custom-input \ type="email"
-            +custom-input({
-              inputType: "email",
-              inputLabel: "Введите вашу почту",
-              inputName: "user-mail",
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-input({
-                  inputType: "email",
-                  inputLabel: "Введите вашу почту",
-                  inputName: "user-mail",
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-textarea \ default
-            +custom-textarea({
-              inputLabel: "Расскажите о себе",
-              inputName: "user-info"
-            })
-            pre
-              |
-              code(class="language-pug").
-                +custom-textarea({
-                  inputLabel: "Расскажите о себе",
-                  inputName: "user-info"
-                })
-          .uikit__component
-            p.uikit__text.uikit__text--class +custom-toggle \ default
-            +custom-toggle({
-              inputLabel: "Чекбокс",
-              inputName: "user-agreement",
-              inputValue: "user-agreement-1",
-              inputChecked: false
-            }).custom-toggle--checkbox
-            pre
-              |
-              code(class="language-pug").
-                +custom-toggle({
-                  inputLabel: "Чекбокс",
-                  inputName: "user-agreement",
-                  inputValue: "user-agreement-1",
-                  inputChecked: false
-                }).custom-toggle--checkbox
 
-
+        //-  Subscribe form
+        section.uikit__section(id="socials")
+          h2.uikit__h2 Socials
           .uikit__component
-            p.uikit__text Базовый селект c placeholder
-            p.uikit__text.uikit__text--class +custom-select \ default
-            +custom-select({
-              placeholder: "Выберите одну из опций",
-              error: "Выберите тему обращения",
-              optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-            }).custom-select(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1")
+            p.uikit__text.uikit__text--class .socials
+            .bg-gradient
+              +socials([
+                {iconName: "icon-tw", href: "#/", label: "Twitter"},
+                {iconName: "icon-fb",href: "#/", label: "Facebook"},
+                {iconName: "icon-ig", href: "#/", label: "Instagram"},
+                {iconName: "icon-gh", href: "#/", label: "GitHub"},
+              ])
             pre
               |
               code(class="language-pug").
-                +custom-select({
-                  placeholder: "Выберите одну из опций",
-                  error: "Выберите тему обращения",
-                  optionsList: [{text: "Тема 1", value: "id-1"}, {text: "Тема 2", value: "id-2"}, {text: "Тема 3", value: "id-3"}, {text: "Тема 4", value: "id-4"}, {text: "Тема 5", value: "id-5"}, {text: "Тема 6", value: "id-6"}]
-                }).custom-select(data-select, data-validate-type="select", data-name="some-name", data-id="id-example-1")
-
+                +socials([
+                  {iconName: "icon-tw", href: "#/", label: "Twitter"},
+                  {iconName: "icon-fb",href: "#/", label: "Facebook"},
+                  {iconName: "icon-ig", href: "#/", label: "Instagram"},
+                  {iconName: "icon-gh", href: "#/", label: "GitHub"},
+                ])
 
   script
     include ../../js/inline/ui-kit.js

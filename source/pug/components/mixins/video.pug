@@ -1,0 +1,16 @@
+mixin video(data)
+  .video
+    .video__player
+      video(class="video__content", id="video", poster=`img/content/${data.posterfile}`)
+        source(src=`video/${data.videoFile}` type=data.videoType)
+    .video__info-box
+      .video__badge
+        +badge({text: data.badgeTest, big: true})
+      +title({tag: "h3", text: data.videoTitle, mods: ["h4"]}).video__name
+    button.video__main-play-btn(type="button", aria-label="Play video")
+      +icon("main-play-button", 100, 100)
+    .video__control-bar
+      button.video__play-btn(type="button", id="play-pause", aria-label="Play/Pause")
+        +icon("icon-play", 12, 14)(id="icon-play")
+        +icon("icon-pause", 12, 14)(id="icon-pause")
+      input.video__seek-bar(type="range", id="seek-bar", value="0")
