@@ -15,11 +15,11 @@ mixin article()
 
   .article
     +badge({text: "VR Architecture", big: true}).article__badge
-    +title({tag: "h3", text: "Bringing Designs to Life: How VR is Changing Architecture", mods: ["h3"]}).article__title
+    +title({tag: "h2", text: "Bringing Designs to Life: How VR is Changing Architecture", mods: ["h3"]}).article__title
     .article__publication-data
       p
         | Nasyiya Ulfa |
-        time(pubdate, datetime="2022-11-25") 25 Nov 2022
+        time(datetime="2022-11-25") 25 Nov 2022
     .article__picture
       +picture("content", "article-pic-1", "jpg", 789, 528, "In VR")
     p!= "Architecture is&nbsp;an&nbsp;art and science that is&nbsp;constantly evolving with technology. The industry has gone through various transformations over the years, from pencil and paper sketches to&nbsp;computer-aided design (CAD) software. However, one technology that is&nbsp;revolutionizing architecture is&nbsp;virtual reality (VR) design."
@@ -35,12 +35,12 @@ mixin article()
     p!= "The benefits of&nbsp;VR design in&nbsp;architecture are clear, and the technology is&nbsp;becoming increasingly accessible and affordable. More and more architects and firms are incorporating&nbsp;VR design into their workflows, and the industry is&nbsp;poised for a&nbsp;major transformation."
     p!= "In&nbsp;conclusion, VR&nbsp;design is&nbsp;changing the way architects design and bring their projects to&nbsp;life. It&nbsp;is&nbsp;a&nbsp;powerful tool that offers a&nbsp;range of&nbsp;benefits, from increased precision and efficiency in&nbsp;the design phase to&nbsp;better communication and understanding with clients. As&nbsp;the technology becomes more advanced and widespread, we&nbsp;can expect to&nbsp;see more innovative designs and better-designed buildings in&nbsp;the future."
     .article__list-wrapper
-      +title({tag: "h4", text: "Post &nbsp;Tags&nbsp;:", mods: ["h10"]}).article__list-title
+      +title({tag: "h3", text: "Post &nbsp;Tags&nbsp;:", mods: ["h10"]}).article__list-title
       ul.article__tag-list
         each tag in tagList
           li.article__tag!= tag
     .article__list-wrapper
-      +title({tag: "h4", text: "Share", mods: ["h10"]}).article__list-title
+      +title({tag: "h3", text: "Share", mods: ["h10"]}).article__list-title
       +socials([
         {iconName: "icon-tw", href: "#/", label: "Twitter"},
         {iconName: "icon-fb",href: "#/", label: "Facebook"},

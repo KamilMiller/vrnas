@@ -2,6 +2,11 @@
   display: block;
   padding-bottom: 24px;
   text-decoration: none;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.8;
+  }
 
   &__inner {
     display: grid;

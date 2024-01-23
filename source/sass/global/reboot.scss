@@ -131,10 +131,13 @@ button,
 
 :root {
   --header-height: 114px;
-  --intro-light-top: 0;
+  --pricing-inner-padding-bottom: 46px;
+
+  @include vp-1023 {
+    --pricing-inner-padding-bottom: 89px;
+  }
 
   @include vp-767 {
     --header-height: 116px;
-    --intro-light-top: 186px;
   }
 }

@@ -1,6 +1,6 @@
 mixin subscribe-form()
   .subscribe-form(data-form-validate, data-callback="base")
-    form(action="", autocomplete="off", name="subscribe", id="subscribe-form")
+    form(action="https://echo.htmlacademy.ru/", autocomplete="off", name="subscribe", id="subscribe-form")
       .subscribe-form__form-inner
         .subscribe-form__success-message.subscribe-form__success-message--hidden
           p Your message has sent!
@@ -8,5 +8,5 @@ mixin subscribe-form()
           label.visually-hidden(for="email") E-mail
           input(type="email", id="email", name="email-field", placeholder="Enter your email address", required)
           +icon("icon-email", 24, 24).subscribe-form__email-icon
-      button.subscribe-form__button(type="submit")
+      button.subscribe-form__button(type="submit", aria-label="Subscribe")
         +icon("icon-submit", 16, 16)

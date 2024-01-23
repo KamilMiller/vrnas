@@ -1,0 +1,8 @@
+mixin personal-card(data)
+  .personal-card
+    .personal-card__inner
+      +picture("content", data.image, "jpg", 274, 370, `${data.positon} ${data.name}`)
+      .personal-card__gradient
+      .personal-card__info-box
+        p!= data.name
+        span!= data.position

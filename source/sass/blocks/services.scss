@@ -22,7 +22,7 @@
   &__item {
     position: relative;
     min-height: 291px;
-    padding: 28px 32px 25px;
+    padding: 38px 32px 25px;
     background-color: rgba($color-nero, 0.6);
     border: 1px solid transparent;
     border-image: linear-gradient(90deg, rgba($color-default-white, 0.3) 0%, rgba($color-default-white, 0.1) 100%);
@@ -170,6 +170,10 @@
       border: none;
       transform: none;
       padding: 0;
+
+      &:nth-child(even) {
+        transform: none;
+      }
     }
 
     .services__icon-box {

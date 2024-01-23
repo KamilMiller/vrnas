@@ -14,7 +14,9 @@ mixin about-us(data)
             ul.about-us__technology-list
               each item in data.technologyList
                 li.about-us__technology-item
-                  +icon("check-box-icon", 16, 16, true)
-                  p!= item
+                  .about-us__checkbox-wrapper
+                    +icon("check-box-icon", 16, 16, true)
+                  .about-us__technology-item-text
+                    p!= item
           if data.readMoreBtn
             +btn({text: "Read more", href: "#"}).about-us__btn

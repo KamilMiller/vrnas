@@ -1,7 +1,5 @@
 import {mobileVhFix} from './utils/mobile-vh-fix.js';
 import {Form} from './modules/form-validate/form';
-import {CustomSelect} from './modules/select/custom-select';
-import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
 import {initHeaderFix} from './modules/header/init-header-fix';
 import {getHeaderHeight} from './modules/header/get-header-height';
 import {Burger} from './modules/header/burger';
@@ -12,6 +10,7 @@ import {setCustomVideoControl} from './modules/video/set-custom-video-control.js
 import {changeVideoPoster} from './modules/video/change-poster.js';
 import {generateTimeline} from './modules/lifting-by-scroll/set-lifting-by-scroll.js';
 import {setTopBlockLifting} from './modules/lifting-by-scroll/set-top-block-lifting.js';
+import {setPricingPaddingBottom} from './modules/pricing/set-pricing-padding-bottom.js';
 
 // ---------------------------------
 
@@ -27,6 +26,7 @@ window.addEventListener('DOMContentLoaded', () => {
   showLearnMoreButton();
   setCustomVideoControl();
   changeVideoPoster();
+  setPricingPaddingBottom();
   generateTimeline();
   setTopBlockLifting();
 
@@ -36,11 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    uploadFile();
-    uploadImageDrop();
     initAccordions();
-    const select = new CustomSelect();
-    select.init();
     const form = new Form();
     window.form = form;
     form.init();

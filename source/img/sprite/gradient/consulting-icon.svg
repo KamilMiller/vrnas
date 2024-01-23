@@ -14,35 +14,35 @@
 </g>
 <defs>
 <linearGradient id="paint0_linear_84_3526" x1="31.7259" y1="26.2671" x2="48" y2="26.2671" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint1_linear_84_3526" x1="0" y1="29.8343" x2="37.0485" y2="29.8343" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint2_linear_84_3526" x1="7.53107" y1="22.0127" x2="40.469" y2="22.0127" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint3_linear_84_3526" x1="7.53107" y1="26.7656" x2="40.469" y2="26.7656" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint4_linear_84_3526" x1="7.53107" y1="31.5176" x2="27.8588" y2="31.5176" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint5_linear_84_3526" x1="14.4196" y1="9.58077" x2="33.5804" y2="9.58077" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint6_linear_84_3526" x1="16.8483" y1="15.1484" x2="31.1365" y2="15.1484" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 <linearGradient id="paint7_linear_84_3526" x1="19.8708" y1="8.4364" x2="28.1289" y2="8.4364" gradientUnits="userSpaceOnUse">
-<stop stop-color="#0CBAF1"/>
+<stop offset="0" stop-color="#0CBAF1"/>
 <stop offset="1" stop-color="#E95CE9"/>
 </linearGradient>
 </defs>

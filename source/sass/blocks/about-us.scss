@@ -76,7 +76,6 @@
 
   &__technology-item {
     display: flex;
-    align-items: center;
     margin-bottom: 18px;
 
     &:last-child {
@@ -84,12 +83,18 @@
     }
   }
 
-  &__technology-item svg {
+  &__checkbox-wrapper {
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  &__checkbox-wrapper svg {
     width: 16px;
     height: 16px;
   }
 
-  &__technology-item p {
+  &__technology-item-text p {
     margin: 0 0 0 12px;
   }
 

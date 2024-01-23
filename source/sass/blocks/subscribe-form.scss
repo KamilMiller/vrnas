@@ -7,6 +7,11 @@
     padding: 3px;
     background-color: rgba($color-default-white, 0.07);
     border-radius: 2px;
+    transition: background-color $trans-default;
+
+    @include hover-focus {
+      background-color: rgba($color-default-white, 0.04);
+    }
 
     @include vp-1023 {
       grid-template-columns: minmax(min-content, 306px) min-content;
@@ -116,10 +121,10 @@
     background: rgba($color-default-white, 0.21);
     border: none;
     cursor: pointer;
-    transition: background $trans-default;
+    transition: opacity $trans-default;
 
     @include hover-focus {
-      background: rgba($color-default-white, 0.5);
+      opacity: 0.8;
     }
   }
 }

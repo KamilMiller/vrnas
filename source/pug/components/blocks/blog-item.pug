@@ -2,7 +2,7 @@ mixin blog-item(breadcrumbsData)
   .blog-item(data-top-block)
     .container
       .blog-item__inner
-        +title({tag: "h2", text: "Blog post", isHidden: true})
+        +title({tag: "h1", text: "Blog post", isHidden: true})
         +icon("light-9", 430, 318, true)
         .blog-item__breadcrumbs-wrapper
           +breadcrumbs(breadcrumbsData)

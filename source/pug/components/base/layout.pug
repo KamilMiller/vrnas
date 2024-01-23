@@ -4,7 +4,7 @@ include ../components
 
 block variables
 
-html(lang="ru")
+html(lang="en")
   head
     title= title
     meta(charset="utf-8")
@@ -45,9 +45,10 @@ html(lang="ru")
   body
     +sprite()
     .wrapper(class=wrapperMods)
-      if (wrapperMods === "wrapper--common")
+      if (wrapperMods !== "wrapper--sitemap")
         +icon("wave", 736, 353, true).wrapper__bg-wave.wrapper__bg-wave--upper
         +icon("wave", 736, 353, true).wrapper__bg-wave.wrapper__bg-wave--lower
+        +icon("decorative-grid", 2682, 721).wrapper__bg-grid
 
       if (hasHeader)
         +header(headerMods, currentUrl)

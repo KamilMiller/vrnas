@@ -78,10 +78,14 @@
 
   &__contact-btn-box {
     order: 4;
+    max-width: 130px;
     margin-left: 20px;
 
     @include vp-767 {
       display: none;
+      margin-left: 0;
+      opacity: 0;
+      animation: appearance 2s forwards;
     }
   }
 
@@ -105,7 +109,12 @@
     .header__nav {
       @include vp-767 {
         display: block;
-        height: calc(100% - 32px);
+      }
+    }
+
+    .header__contact-btn-box {
+      @include vp-767 {
+        display: block;
       }
     }
   }

@@ -5,4 +5,5 @@ mixin breadcrumbs(data)
         if item.href
           a(href=item.href)!= item.text
         else
-          span!= item.text
+          .breadcrumbs__current-page
+            span!= item.text

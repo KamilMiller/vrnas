@@ -6,17 +6,12 @@
   min-height: 100vh;
   /* stylelint-disable-next-line */
   min-height: calc(100 * var(--vh, 1vh));
-  background-color: $color-default-white;
+  padding-top: var(--header-height);
+  background-color: $color-grayscale-black-100;
+  overflow: hidden;
 
-  &--common {
-    padding-top: var(--header-height);
-    background-color: $color-grayscale-black-100;
-    overflow: hidden;
-
-    // Temp:
-    main {
-      min-height: 2000px;
-    }
+  &--sitemap {
+    background-color: $color-default-white;
   }
 
   &__bg-wave {
@@ -41,6 +36,14 @@
     }
   }
 
+  &__bg-grid {
+    position: absolute;
+    left: 50%;
+    display: none;
+    width: 2682px;
+    height: 721px;
+  }
+
   .header,
   .footer {
     flex-shrink: 0;
@@ -48,6 +51,26 @@
 
   main {
     flex-grow: 1;
+  }
+}
+
+.wrapper--upper-grid .wrapper__bg-grid {
+  top: 284px;
+  transform: translateX(-2305px);
+  display: block;
+
+  @include vp-1023 {
+    transform: translateX(-1720px);
+  }
+}
+
+.wrapper--middle-grid .wrapper__bg-grid {
+  top: 966px;
+  transform: translateX(-2410px);
+  display: block;
+
+  @include vp-1023 {
+    transform: translateX(-2080px);
   }
 }
 

@@ -1,40 +1,40 @@
-<svg width="1097" height="721" viewBox="0 0 1097 721" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_9_155)">
-<path opacity="0.2" d="M-88.1929 0L1408.61 728.783" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-176.241 42.8691L1320.57 771.652" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-264.289 85.7393L1232.52 814.522" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-352.336 128.608L1144.47 857.391" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-440.383 171.479L1056.42 900.261" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-528.43 214.348L968.377 943.13" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-616.478 257.218L880.33 986.001" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-704.526 300.087L792.281 1028.87" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-792.574 342.957L704.234 1071.74" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-880.62 385.826L616.187 1114.61" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-968.668 428.695L528.139 1157.48" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1056.71 471.565L440.093 1200.35" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1144.76 514.435L352.045 1243.22" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1232.81 557.305L263.996 1286.09" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1320.86 600.174L175.949 1328.96" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1408.91 643.044L87.9019 1371.83" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M-1496.95 685.913L-0.145237 1414.7" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M87.9022 85.7393L-1408.91 814.522" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M175.949 128.608L-1320.86 857.391" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M263.997 171.479L-1232.81 900.261" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M352.045 214.348L-1144.76 943.13" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M440.092 257.218L-1056.72 986.001" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M528.139 300.087L-968.668 1028.87" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M616.187 342.957L-880.621 1071.74" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M704.217 385.826L-792.59 1114.61" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M792.265 428.695L-704.543 1157.48" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M880.312 471.565L-616.496 1200.35" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M968.359 514.435L-528.448 1243.22" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M1056.41 557.305L-440.401 1286.09" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M1144.45 600.174L-352.353 1328.96" stroke="white" stroke-opacity="0.4"/>
-<path opacity="0.2" d="M1232.5 643.044L-264.306 1371.83" stroke="white" stroke-opacity="0.4"/>
+<svg width="2682" height="721" viewBox="0 0 2682 721" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_7146_433)">
+<path opacity="0.2" d="M1496.81 0L2993.62 728.783" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1408.76 42.8691L2905.57 771.652" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1320.71 85.7393L2817.52 814.522" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1232.67 128.608L2729.47 857.391" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1144.62 171.479L2641.42 900.261" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1056.57 214.348L2553.38 943.13" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M968.523 257.218L2465.33 986.001" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M880.475 300.087L2377.28 1028.87" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M792.427 342.957L2289.23 1071.74" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M704.381 385.826L2201.19 1114.61" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M616.332 428.695L2113.14 1157.48" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M528.286 471.565L2025.09 1200.35" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M440.238 514.435L1937.05 1243.22" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M352.189 557.305L1849 1286.09" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M264.143 600.174L1760.95 1328.96" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M176.096 643.044L1672.9 1371.83" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M88.0479 685.913L1584.86 1414.7" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1672.9 85.7393L176.096 814.522" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1760.95 128.608L264.143 857.391" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1849 171.479L352.19 900.261" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M1937.04 214.348L440.238 943.13" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2025.09 257.218L528.284 986.001" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2113.14 300.087L616.333 1028.87" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2201.19 342.957L704.38 1071.74" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2289.22 385.826L792.411 1114.61" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2377.27 428.695L880.458 1157.48" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2465.31 471.565L968.505 1200.35" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2553.36 514.435L1056.55 1243.22" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2641.41 557.305L1144.6 1286.09" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2729.46 600.174L1232.65 1328.96" stroke="white" stroke-opacity="0.4"/>
+<path opacity="0.2" d="M2817.5 643.044L1320.69 1371.83" stroke="white" stroke-opacity="0.4"/>
 </g>
 <defs>
-<clipPath id="clip0_9_155">
-<rect width="2682" height="721" fill="white" transform="translate(-1585)"/>
+<clipPath id="clip0_7146_433">
+<rect width="2682" height="721" fill="white"/>
 </clipPath>
 </defs>
 </svg>

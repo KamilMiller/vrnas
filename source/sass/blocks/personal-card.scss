@@ -1,0 +1,65 @@
+.personal-card {
+  width: 290px;
+  height: 386px;
+  padding: 8px;
+  border: 1px solid transparent;
+  border-image: linear-gradient(90deg, rgba($color-default-white, 0.3) 0%, rgba($color-default-white, 0.1) 100%);
+  border-image-slice: 1;
+  transition: border-image $trans-default;
+
+  @include hover {
+    border-image: $purple-to-blue;
+    border-image-slice: 1;
+  }
+
+  @include vp-767 {
+    height: 389px;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    align-items: 0;
+    overflow: hidden;
+  }
+
+  &__inner img,
+  &__gradient,
+  &__info-box {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__gradient {
+    z-index: 1;
+    background: linear-gradient(180deg, rgba($color-cerulean-blue, 0) 0%, $color-midnight-blue 100%);
+  }
+
+  &__info-box {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 9px;
+  }
+
+  &__info-box p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 28px;
+  }
+
+  &__info-box span {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $color-gray-1;
+  }
+}

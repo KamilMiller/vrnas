@@ -1,11 +1,7 @@
 .pricing {
   &__inner {
     position: relative;
-    padding-bottom: 46px;
-
-    @include vp-1023 {
-      padding-bottom: 89px;
-    }
+    padding-bottom: var(--pricing-inner-padding-bottom);
 
     @include vp-429 {
       padding-bottom: 0;

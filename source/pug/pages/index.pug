@@ -2,7 +2,7 @@ extends ../components/base/layout
 
 block variables
   - const title = "VRNas - Homepage" //- на страницах кроме главной используйте О нас — ProjectName
-  - const wrapperMods = "wrapper--common"
+  - const wrapperMods = "wrapper--upper-grid"
   - const hasHeader = true
   - const headerMods = ""
   - const hasFooter = true
@@ -12,7 +12,7 @@ block variables
 block main
   main
     +intro()
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
+    .page-section.page-section--upper(data-section-animation, data-start="top bottom", data-end="top center")
       .page-section__inner(data-animation="y: 0", data-animation-direction="to")
         +about-us(homePageAboutData)
     .page-section(data-section-animation, data-start="top bottom", data-end="top center")

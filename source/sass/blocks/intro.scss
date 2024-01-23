@@ -19,13 +19,22 @@
 
     &--light {
       left: 42%;
-      top: var(--intro-light-top);
+      // top: var(--intro-light-top);
+      top: 0;
+      width: 871px;
+      height: 780px;
+
+      @include vp-1279 {
+        left: 35%;
+      }
+
+      @include vp-1023 {
+        left: 25%;
+      }
 
       @include vp-767 {
-        // top: 186px; // To JS calc
+        top: 186px; // To JS calc
         left: 17%;
-        width: 978px;
-        height: 760px;
       }
 
       @include vp-599 {
@@ -34,6 +43,16 @@
 
       @include vp-429 {
         left: -15%;
+      }
+
+      svg {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 871px;
+        height: 760px;
+        fill: linear-gradient(99deg, rgba(28, 196, 249, 0.8) 0.72%, rgba(254, 105, 254, 0.8) 90.69%);
+        filter: blur(25px);
       }
     }
   }

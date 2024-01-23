@@ -9,6 +9,7 @@
   letter-spacing: 1.5px;
   color: $color-default-white;
   text-transform: uppercase;
+  user-select: none;
   cursor: pointer;
   transition: opacity $trans-default;
 
