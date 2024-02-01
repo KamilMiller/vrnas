@@ -16,14 +16,18 @@ const handleMouseMove = (evt) => { // обновляет наши координ
 
 const updateParallax = () => {
   parallaxItems.forEach((item) => {
-    const movement = item.dataset.movement ? item.dataset.movement : 1; // определяем коэффициент смещения по дата атрибуту
+    if (window.matchMedia('(min-width: 768px)').matches) {
+      const movement = item.dataset.movement ? item.dataset.movement : 1; // определяем коэффициент смещения по дата атрибуту
 
-    gsap.to(item, { // добавляем смещение через gsap
-      x: mouseCords.x / movement,
-      y: mouseCords.y / movement,
-      duration: item.dataset.duration ? item.dataset.duration : 0.5,
-      ease: 'power1.out',
-    });
+      gsap.to(item, { // добавляем смещение через gsap
+        x: mouseCords.x / movement,
+        y: mouseCords.y / movement,
+        duration: item.dataset.duration ? item.dataset.duration : 0.5,
+        ease: 'power1.out',
+      });
+    } else {
+      item.style.transform = 'none';
+    }
   });
 };
 

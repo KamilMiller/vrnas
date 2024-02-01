@@ -23,6 +23,10 @@
     background: $purple-to-blue;
     transition: opacity $trans-default;
 
+    @include vp-429 {
+      margin-right: 5px;
+    }
+
     &:last-child {
       margin-right: 0;
     }
