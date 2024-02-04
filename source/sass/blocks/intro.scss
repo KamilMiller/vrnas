@@ -19,7 +19,6 @@
 
     &--light {
       left: 42%;
-      // top: var(--intro-light-top);
       top: 0;
       width: 871px;
       height: 780px;
@@ -194,10 +193,23 @@
   }
 
   &__client-statistic-box p {
+    position: relative;
     margin: 0;
     font-size: 16px;
     font-weight: 300;
     line-height: 28px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: -9px;
+      display: block;
+      width: 48px;
+      height: 7px;
+      background-image: url("../img/svg/decorative-underline.svg");
+      background-color: transparent;
+    }
   }
 
   &__client-statistic-box b {
