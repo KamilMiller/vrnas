@@ -1,42 +1,57 @@
 import {gsap} from '../../vendor/gsap.min.js';
 
-const parallaxItems = document.querySelectorAll('[data-parallax-mouse]');
 const parallaxElements = document.querySelectorAll('[data-parallax-box]');
 
-let mouseCords = {
-  x: 0,
-  y: 0,
-}; // задаем изначальные координаты
+class ParallaxMouseMove {
+  #parallaxElement = null;
+  #parallaxItems = [];
+  #mouseCordsX = 0;
+  #mouseCordsY = 0;
 
-const handleMouseMove = (evt) => { // обновляет наши координаты
-  mouseCords.x = evt.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
-  mouseCords.y = evt.clientY - window.innerHeight / 2;
-};
+  constructor(element) {
+    this.#parallaxElement = element;
+  }
 
+  #handleMouseMove = (evt) => { // обновляет наши координаты
+    this.#mouseCordsX = evt.clientX - window.innerWidth / 2; // ставим координаты мыши относительно центра экрана
+    this.#mouseCordsY = evt.clientY - window.innerHeight / 2;
+  };
 
-const updateParallax = () => {
-  parallaxItems.forEach((item) => {
-    if (window.matchMedia('(min-width: 768px)').matches) {
-      const movement = item.dataset.movement ? item.dataset.movement : 1; // определяем коэффициент смещения по дата атрибуту
+  #updateParallax = () => {
+    this.#parallaxItems = this.#parallaxElement.querySelectorAll('[data-parallax-mouse]');
 
-      gsap.to(item, { // добавляем смещение через gsap
-        x: mouseCords.x / movement,
-        y: mouseCords.y / movement,
-        duration: item.dataset.duration ? item.dataset.duration : 0.5,
-        ease: 'power1.out',
-      });
-    } else {
-      item.style.transform = 'none';
-    }
-  });
-};
+    this.#parallaxItems.forEach((item) => {
+      if (window.matchMedia('(min-width: 768px)').matches) {
+        const movement = item.dataset.movement ? item.dataset.movement : 1; // определяем коэффициент смещения по дата атрибуту
 
-gsap.ticker.add(updateParallax); // вместо нового requestAnimationFrame используем rAF гсапа
+        gsap.to(item, { // добавляем смещение через gsap
+          x: this.#mouseCordsX / movement,
+          y: this.#mouseCordsY / movement,
+          duration: item.dataset.duration ? item.dataset.duration : 0.5,
+          ease: 'power1.out',
+        });
+      } else {
+        item.style.transform = 'none';
+      }
+    });
+  };
+
+  #startTicker = () => gsap.ticker.add(this.#updateParallax);
+
+  #setMouseMoveListener = () => {
+    this.#parallaxElement.addEventListener('mousemove', (evt) =>  this.#handleMouseMove(evt))
+  }
+
+  init = () => {
+    this.#startTicker();
+    this.#setMouseMoveListener();
+  };
+}
 
 export const setParallax = () => {
   parallaxElements.forEach((element) => {
-    element.addEventListener('mousemove', (evt) => {
-      handleMouseMove(evt, element);
-    }); // добавляем обработчик по движению мыши
+    const newParallaxElement = new ParallaxMouseMove(element);
+    newParallaxElement.init();
+    // добавляем обработчик по движению мыши
   });
 };

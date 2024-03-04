@@ -5,7 +5,8 @@ parserOptions:
   sourceType: 'module'
 
 env:
-  es6: true
+  // es6: true
+  es2022: true
   browser: true
   commonjs: true
 
