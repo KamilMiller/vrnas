@@ -2,27 +2,28 @@ mixin partners()
   - let count = 1
 
   section.partners
-    .container
-      .partners__inner
-        .partners__header
-          +title({tag: "h2", text: "Our trusted partners", mods: ["mini"]}).partners__title
-          +title({text: "Discover the Companies We Work With", mods: ["h2"]}).partners__subtitle
-        .partners__main
-          .partners__main-inner
-            .partners__ring-box
-              .partners__ring-box-wrapper
-                .partners__ring.partners__ring--1
-                .partners__ring.partners__ring--2.partners__ring--gradient-border
-                .partners__ring.partners__ring--3
-                .partners__ring.partners__ring--4
-                .partners__ring.partners__ring--5
-            .partners__shadow
-            .partners__picture-box
-              .partners__picture-bg
-              +icon("light-7", 1039, 692, true)
-              +picture("content", "user-5", "png", 707, 555, "User of Head Mounted Display", true)
-            ul.partners__list
-              while count <= 7
-                li.partners__item(class=`partners__item--${count}`)
-                  +icon(`partner-logo-${count}`, 79, 20)
-                  - count += 1;
+    +page-section()
+      .container
+        .partners__inner
+          .partners__header
+            +title({tag: "h2", text: "Our trusted partners", mods: ["mini"]}).partners__title
+            +title({text: "Discover the Companies We Work With", mods: ["h2"]}).partners__subtitle
+          .partners__main
+            .partners__main-inner
+              .partners__ring-box
+                .partners__ring-box-wrapper
+                  .partners__ring.partners__ring--1
+                  .partners__ring.partners__ring--2.partners__ring--gradient-border
+                  .partners__ring.partners__ring--3
+                  .partners__ring.partners__ring--4
+                  .partners__ring.partners__ring--5
+              .partners__shadow
+              .partners__picture-box
+                .partners__picture-bg
+                +icon("light-7", 1039, 692, true)
+                +picture("content", "user-5", "png", 707, 555, "User of Head Mounted Display", true)
+              ul.partners__list
+                while count <= 7
+                  li.partners__item(class=`partners__item--${count}`)
+                    +icon(`partner-logo-${count}`, 79, 20)
+                    - count += 1;

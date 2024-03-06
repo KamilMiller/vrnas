@@ -1,0 +1,10 @@
+mixin page-section(mods, inner = true, externalAttributes)
+  - const defaultAttributes = {'data-section-animation': '', 'data-start': 'top bottom', 'data-end': 'top center'};
+  - const currentAttributes = externalAttributes ? externalAttributes : defaultAttributes;
+
+  .page-section(class=mods)&attributes(currentAttributes)
+    if inner
+      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
+        block
+    else
+      block

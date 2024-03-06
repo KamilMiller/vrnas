@@ -1,9 +1,10 @@
 mixin subscribe-box()
   section.subscribe-box
-    .container
-      .subscribe-box__inner
-        .subscribe-box__text
-          +title({tag: "h2", text: "Subscribe form", isHidden: true})
-          +title({text: "Subscribe to our newsletter for latest updates", mods: ["h3"]}).subscribe-box__subtitle
-        .subscribe-box__form-wrapper
-          +subscribe-form()
+    +page-section()
+      .container
+        .subscribe-box__inner
+          .subscribe-box__text
+            +title({tag: "h2", text: "Subscribe form", isHidden: true})
+            +title({text: "Subscribe to our newsletter for latest updates", mods: ["h3"]}).subscribe-box__subtitle
+          .subscribe-box__form-wrapper
+            +subscribe-form()

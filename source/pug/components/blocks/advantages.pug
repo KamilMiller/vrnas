@@ -1,17 +1,18 @@
 mixin advantages(data)
   section.advantages(class=`${data.reflected ? "advantages--reflected" : ""}`)
-    .container
-      .advantages__inner(data-parallax-box)
-        .advantages__content-box
-          +title({tag: "h2", text: data.title, mods: ["mini"]}).advantages__title
-          +title({text: data.subtitle, mods: ["h2"]}).advantages__subtitle
-          .advantages__accordion(data-accordion="parent", data-single)
-            each item in data.advantagesList
-              .advantages__accordion-element.is-active(data-accordion="element")
-                button.advantages__accordion-button(type="button", data-accordion="button")!= item.title
-                  +icon("arrow-down", 12, 12)
-                .advantages__accordion-content(data-accordion="content")
-                  .advantages__accordion-wrapper
-                    p!= item.text
-        .advantages__illustration-box
-          +parallax(data.parallaxIllustration)
+    +page-section()
+      .container
+        .advantages__inner(data-parallax-box)
+          .advantages__content-box
+            +title({tag: "h2", text: data.title, mods: ["mini"]}).advantages__title
+            +title({text: data.subtitle, mods: ["h2"]}).advantages__subtitle
+            .advantages__accordion(data-accordion="parent", data-single)
+              each item in data.advantagesList
+                .advantages__accordion-element.is-active(data-accordion="element")
+                  button.advantages__accordion-button(type="button", data-accordion="button")!= item.title
+                    +icon("arrow-down", 12, 12)
+                  .advantages__accordion-content(data-accordion="content")
+                    .advantages__accordion-wrapper
+                      p!= item.text
+          .advantages__illustration-box
+            +parallax(data.parallaxIllustration)

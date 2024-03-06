@@ -1,22 +1,28 @@
-mixin about-us(data)
+mixin about-us(data, pageSectionOptions = {})
+  - const inner = pageSectionOptions.inner
+  - const mods = pageSectionOptions.mods || [];
+  - const classMods = mods.map((mods) => `page-section--${mods}`).join(' ');
+  - const attr = pageSectionOptions.attr || false
+
   section.about-us(class=`${data.reflected ? "about-us--reflected" : ""}`)
-    .container
-      .about-us__inner(data-parallax-box)
-        .about-us__illustration-box
-          +parallax(data.parallaxIllustration)
-        .about-us__content-box
-          +title({tag: "h2", text: "About us", mods: ["mini"]}).about-us__title
-          +title({text: data.subtitle, mods: ["h2"]}).about-us__subtitle
-          .about-us__text
-            each paragraph in data.text
-              p!= paragraph
-          if data.technologyList
-            ul.about-us__technology-list
-              each item in data.technologyList
-                li.about-us__technology-item
-                  .about-us__checkbox-wrapper
-                    +icon("check-box-icon", 16, 16, true)
-                  .about-us__technology-item-text
-                    p!= item
-          if data.readMoreBtn
-            +btn({text: "Read more", href: "#"}).about-us__btn
+    +page-section(classMods, inner, attr)
+      .container
+        .about-us__inner(data-parallax-box)
+          .about-us__illustration-box
+            +parallax(data.parallaxIllustration)
+          .about-us__content-box
+            +title({tag: "h2", text: "About us", mods: ["mini"]}).about-us__title
+            +title({text: data.subtitle, mods: ["h2"]}).about-us__subtitle
+            .about-us__text
+              each paragraph in data.text
+                p!= paragraph
+            if data.technologyList
+              ul.about-us__technology-list
+                each item in data.technologyList
+                  li.about-us__technology-item
+                    .about-us__checkbox-wrapper
+                      +icon("check-box-icon", 16, 16, true)
+                    .about-us__technology-item-text
+                      p!= item
+            if data.readMoreBtn
+              +btn({text: "Read more", href: "#"}).about-us__btn

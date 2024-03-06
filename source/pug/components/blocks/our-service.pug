@@ -1,15 +1,16 @@
 mixin our-service(data, list)
   section.our-service(class=`${data.text ? "" : "our-service--without-text"}`)
-    .container
-      .our-service__inner
-        if data.text
-          +icon("light-3", 613, 619, true)
-        .our-service__header
-          .our-service__title-box
-            +title({tag: "h2", text: data.title, mods: ["mini"]}).our-service__title
-            +title({text: data.subtitle, mods: ["h2"]}).our-service__subtitle
+    +page-section()
+      .container
+        .our-service__inner
           if data.text
-            .our-service__text-box
-              p!= "We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have."
-        .our-service__list
-          +services(list, data.shortServiceList)
+            +icon("light-3", 613, 619, true)
+          .our-service__header
+            .our-service__title-box
+              +title({tag: "h2", text: data.title, mods: ["mini"]}).our-service__title
+              +title({text: data.subtitle, mods: ["h2"]}).our-service__subtitle
+            if data.text
+              .our-service__text-box
+                p!= "We&nbsp;use the latest&nbsp;VR hardware and software to&nbsp;create high-quality VR&nbsp;experiences that are accessible and affordable. Our goal is&nbsp;to&nbsp;provide exceptional customer service and support, and our team is&nbsp;always available to&nbsp;answer any questions and address any concerns you may have."
+          .our-service__list
+            +services(list, data.shortServiceList)

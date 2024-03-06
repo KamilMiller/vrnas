@@ -23,22 +23,11 @@ block variables
 block main
   main
     +page-title("About Us", breadcrumbsData)
-    .page-section.page-section--top(data-top-block)
-      +about-us(aboutUsPageAboutData, true)
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
-      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
-        +our-service(aboutUsOurServiceData, shortServiceList)
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
-      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
-        +advantages(aboutUsPageAdvantagesData)
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
-      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
-        +team()
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
-      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
-        +partners()
-    .page-section(data-section-animation, data-start="top bottom", data-end="top center")
-      .page-section__inner(data-animation="y: 0", data-animation-direction="to")
-        +subscribe-box()
+    +about-us(aboutUsPageAboutData, pageSectionOptions = {mods: ['top'], inner: false, attr: {'data-top-block': ''}})
+    +our-service(aboutUsOurServiceData, shortServiceList)
+    +advantages(aboutUsPageAdvantagesData)
+    +team()
+    +partners()
+    +subscribe-box()
 
 block modals
